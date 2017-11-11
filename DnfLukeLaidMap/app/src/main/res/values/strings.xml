@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">던파 루크레이드 맵</string>
+    <string name="card_pattern">카드패 선택</string>
+    <string name="jj">저지</string>
+    <string name="tb">토벌</string>
+
+    <string name="mst_metal">메탈기어 카나프스</string>
+    <string name="mst_the7">더 세븐 미스트랄</string>
+    <string name="mst_losa">점성술사 로사우라</string>
+    <string name="mst_mark">콰트로 마누스 Mark-Ⅱ</string>
+    <string name="mst_bupon">비통의 부폰</string>
+    <string name="mst_habub">파탄의 하부브</string>
+    <string name="mst_beki">양산형 베키</string>
+    <string name="mst_red">레드 크라운</string>
+    <string name="mst_iron">아이언 비스트</string>
+    <string name="mst_argos">초강화 아르고스</string>
+    <string name="mst_jakel">하이퍼스피드 자켈리네</string>
+    <string name="mst_nerbe">악몽의 네르베</string>
+    <string name="mst_ramp">탄식의 램퍼드</string>
+    <string name="mst_karina">오염의 카리나</string>
+
+    <string name="mst_yasin">달빛을 걷는 자 - 야신</string>
+    <string name="mst_beara">악검 베아라</string>
+    <string name="mst_aslan">망각의 아슬란</string>
+    <string name="mst_horus">빛의 우상 호루스</string>
+    <string name="mst_beil">증오의 베일</string>
+    <string name="mst_prince">거완의 왕자 골고타 / 철완의 공주 칼바리</string>
+    <string name="mst_snaider">정화의 스네이더</string>
+    <string name="mst_anubis">어둠의 우상 아누비스</string>
+</resources>
