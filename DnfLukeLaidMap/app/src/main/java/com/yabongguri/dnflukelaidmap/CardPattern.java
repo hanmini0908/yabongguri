@@ -21,7 +21,8 @@ public class CardPattern extends Activity implements View.OnClickListener {
 
         mRg_tan = (RadioGroup)findViewById(R.id.rg_tan);
         int nId = RuntimeConfig.getCardPreference(this);
-        mRg_tan.check(nId);
+        if (nId != 0)
+            mRg_tan.check(nId);
 
         mBtn_card_save = (Button)findViewById(R.id.btn_card_save);
         mBtn_card_save.setOnClickListener(this);
@@ -31,6 +32,7 @@ public class CardPattern extends Activity implements View.OnClickListener {
         if (v.getId() == R.id.btn_card_save) {
             int nId = mRg_tan.getCheckedRadioButtonId();
             RuntimeConfig.setCardPreference(this, nId);
+            finish();
         }
     }
 }

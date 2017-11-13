@@ -19,6 +19,14 @@
             android:name="com.yabongguri.dnflukelaidmap.CardPattern"
             android:label="@string/card_pattern">
         </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.Jj"
+            android:label="@string/jj">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.Tb"
+            android:label="@string/tb">
+        </activity>
     </application>
 
 </manifest>

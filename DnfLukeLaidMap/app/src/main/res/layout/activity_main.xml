@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.yabogguri.dnflukelaidmap.com.yabongguri.dnflukelaidmap.MainActivity">
+    tools:context="com.yabongguri.dnflukelaidmap.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
