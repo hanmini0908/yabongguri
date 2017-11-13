@@ -1,0 +1,5 @@
+1. commit 에서 제외 (git add . 전에 실행해야 함)
+> git update-index --assume-unchanged "file name"
+
+2. commit 에서 제외한 file 추가
+> git update-index --no-assume-unchanged "file name"
