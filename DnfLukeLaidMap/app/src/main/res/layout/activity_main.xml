@@ -10,14 +10,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.yabogguri.dnflukelaidmap.com.example.yabongguri.dnflukelaidmap.MainActivity">
+    tools:context="com.yabogguri.dnflukelaidmap.com.yabongguri.dnflukelaidmap.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="134dp">
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +43,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_select_card_pattern"
             android:layout_gravity="center_horizontal"/>
-
         <Button
             android:text="@string/jj"
             android:layout_width="120dp"
@@ -54,6 +54,13 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn_tb"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:layout_marginTop="20dp"
+            android:text="종료"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_close"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </LinearLayout>

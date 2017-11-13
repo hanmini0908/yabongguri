@@ -4,6 +4,12 @@
     <string name="jj">저지</string>
     <string name="tb">토벌</string>
 
+    <string name="ts_card1">1. 오염의 카리나\n2. 양산형 베키</string>
+    <string name="ts_card2">1. 레드 크라운\n2. 악몽의 네르베</string>
+    <string name="ts_card3">1. 아이언 비스트\n2. 하이퍼스피드 자켈리네</string>
+    <string name="ts_card4">1. 초강화 아르고스\n2. 양산형 베키</string>
+    <string name="ts_card5">1. 오염의 카리나\n2. 하이퍼스피드 자켈리네</string>
+
     <string name="mst_metal">메탈기어 카나프스</string>
     <string name="mst_the7">더 세븐 미스트랄</string>
     <string name="mst_losa">점성술사 로사우라</string>

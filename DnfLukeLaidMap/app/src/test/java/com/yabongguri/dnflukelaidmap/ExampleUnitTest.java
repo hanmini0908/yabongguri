@@ -1,4 +1,4 @@
-package com.example.yabogguri.dnflukelaidmap;
+package com.yabongguri.dnflukelaidmap;
 
 import org.junit.Test;
 

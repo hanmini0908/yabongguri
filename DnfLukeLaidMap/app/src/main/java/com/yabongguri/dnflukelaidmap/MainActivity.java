@@ -1,4 +1,4 @@
-package com.example.yabongguri.dnflukelaidmap;
+package com.yabongguri.dnflukelaidmap;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,13 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.yabogguri.dnflukelaidmap.R;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtn_card;
     private Button mBtn_jj;
     private Button mBtn_tb;
+    private Button mBtn_close;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtn_card = (Button)findViewById(R.id.btn_select_card_pattern);
         mBtn_jj = (Button)findViewById(R.id.btn_jj);
         mBtn_tb = (Button)findViewById(R.id.btn_tb);
+        mBtn_close = (Button)findViewById(R.id.btn_close);
 
         mBtn_card.setOnClickListener(this);
         mBtn_jj.setOnClickListener(this);
         mBtn_tb.setOnClickListener(this);
+        mBtn_close.setOnClickListener(this);
     }
 
     public void onClick(View v)
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_tb:
                 intent = new Intent(this, Tb.class);
+                break;
+            case R.id.btn_close:
+                finish();
                 break;
         }
 
