@@ -39,6 +39,13 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn_ttsss"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:text="맵 선택하기"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_others"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </LinearLayout>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 /**
@@ -20,9 +21,11 @@ public class CardPattern extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_cardpattern);
 
         mRg_tan = (RadioGroup)findViewById(R.id.rg_tan);
-        int nId = RuntimeConfig.getCardPreference(this);
-        if (nId != 0)
-            mRg_tan.check(nId);
+        int nIndex = RuntimeConfig.getCardPreference(this);
+        RadioButton rb = (RadioButton)mRg_tan.getChildAt(nIndex);
+
+        if ((nIndex >= 0) && (rb != null))
+            rb.setChecked(true);
 
         mBtn_card_save = (Button)findViewById(R.id.btn_card_save);
         mBtn_card_save.setOnClickListener(this);
@@ -31,7 +34,10 @@ public class CardPattern extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         if (v.getId() == R.id.btn_card_save) {
             int nId = mRg_tan.getCheckedRadioButtonId();
-            RuntimeConfig.setCardPreference(this, nId);
+            View radioButton = mRg_tan.findViewById(nId);
+            int nIndex = mRg_tan.indexOfChild(radioButton);
+
+            RuntimeConfig.setCardPreference(this, nIndex);
             finish();
         }
     }

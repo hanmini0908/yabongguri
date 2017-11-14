@@ -27,6 +27,18 @@
             android:name="com.yabongguri.dnflukelaidmap.Tb"
             android:label="@string/tb">
         </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.juji.Pppt"
+            android:label="파파파탄">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.juji.Ttsss"
+            android:label="탄탄소소소">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.juji.Others"
+            android:label="저지 맵 선택">
+        </activity>
     </application>
 
 </manifest>
