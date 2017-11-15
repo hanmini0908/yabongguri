@@ -176,20 +176,25 @@ public class Pppt extends Activity {
 
         String strMst1 = getString(R.string.mst_argos);  //카드패턴 0, 2
         String strBoss = getString(R.string.mst_mark);
+        int nDrawableId = R.drawable.map_pa2_0;    //카드패턴 0, 2
 
         switch (mCardPatternIndex) {
             case 1:
                 strMst1 = getString(R.string.mst_jakel);  //카드패턴 1
+                nDrawableId = R.drawable.map_pa2_1;    //카드패턴 1
                 break;
             case 3:
                 strMst1 = getString(R.string.mst_iron);  //카드패턴 3
+                nDrawableId = R.drawable.map_pa2_3;    //카드패턴 3
                 break;
             case 4:
                 strMst1 = getString(R.string.mst_nerbe);  //카드패턴 4
+                nDrawableId = R.drawable.map_pa2_4;    //카드패턴 4
                 break;
         }
 
         mTv_named.setText("1. " + strMst1 + "\nB. " + strBoss);
+        mIv_pppt.setImageResource(nDrawableId);
     }
 
     private void pa3() {
@@ -200,8 +205,10 @@ public class Pppt extends Activity {
         mTv_pppt.setText(strMap + " 3");
 
         String strBoss = getString(R.string.mst_bupon);
+        int nDrawableId = R.drawable.map_pa3;
 
         mTv_named.setText("B. " + strBoss);
+        mIv_pppt.setImageResource(nDrawableId);
     }
 
     private void tan3() {
@@ -213,17 +220,21 @@ public class Pppt extends Activity {
 
         String strMst1 = getString(R.string.mst_beki);  //카드패턴 0, 3
         String strBoss = getString(R.string.mst_losa);
+        int nDrawableId = R.drawable.map_tan3_0;    //카드패턴 0, 3
 
         switch (mCardPatternIndex) {
             case 1:
                 strMst1 = getString(R.string.mst_nerbe);  //카드패턴 1
+                nDrawableId = R.drawable.map_tan3_1;    //카드패턴 1
                 break;
             case 2:
             case 4:
                 strMst1 = getString(R.string.mst_jakel);  //카드패턴 2, 4
+                nDrawableId = R.drawable.map_tan3_2;    //카드패턴 2, 4
                 break;
         }
 
         mTv_named.setText("1. " + strMst1 + "\nB. " + strBoss);
+        mIv_pppt.setImageResource(nDrawableId);
     }
 }
