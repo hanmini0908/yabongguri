@@ -43,6 +43,18 @@
             android:name="com.yabongguri.dnflukelaidmap.juji.Others"
             android:label="저지 맵 선택">
         </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.tobul.Lumen"
+            android:label="빛">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.tobul.Caligo"
+            android:label="어둠">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.tobul.Energy"
+            android:label="에너지 제어실/저장소">
+        </activity>
     </application>
 
 </manifest>

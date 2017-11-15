@@ -28,7 +28,7 @@ public class Others extends Activity implements View.OnClickListener {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jjothers);
+        setContentView(R.layout.activity_jj_others);
 
         mBtn_tan1 = (Button)findViewById(R.id.btn_others_tan1);
         mBtn_tan2 = (Button)findViewById(R.id.btn_others_tan2);

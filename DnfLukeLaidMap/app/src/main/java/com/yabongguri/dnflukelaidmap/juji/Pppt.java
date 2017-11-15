@@ -33,7 +33,7 @@ public class Pppt extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pppt);
+        setContentView(R.layout.activity_jj_pppt);
 
         //Activity에 입력이 없어도 화면 꺼지지 않게 하기
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);

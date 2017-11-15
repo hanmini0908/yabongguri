@@ -33,7 +33,7 @@ public class Ttsss extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ttsss);
+        setContentView(R.layout.activity_jj_ttsss);
 
         //Activity에 입력이 없어도 화면 꺼지지 않게 하기
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -149,8 +149,10 @@ public class Ttsss extends Activity {
         mTv_ttsss.setText(strMap + " 1");
 
         String strBoss = getString(R.string.mst_metal);
+        //int nDrawableId = R.drawable.map_tan1;
 
         mTv_named.setText("B. " + strBoss);
+        //mIv_ttsss.setImageResource(nDrawableId);
     }
 
     private void tan2() {
@@ -162,20 +164,25 @@ public class Ttsss extends Activity {
 
         String strMst1 = getString(R.string.mst_karina);  //카드패턴 0, 4
         String strBoss = getString(R.string.mst_the7);
+        //int nDrawableId = R.drawable.map_tan2_0;  //카드패턴 0, 4
 
         switch (mCardPatternIndex) {
             case 1:
                 strMst1 = getString(R.string.mst_red);  //카드패턴 1
+                //nDrawableId = R.drawable.map_tan2_1;  //카드패턴 1
                 break;
             case 2:
                 strMst1 = getString(R.string.mst_iron);  //카드패턴 2
+                //nDrawableId = R.drawable.map_tan2_2;  //카드패턴 2
                 break;
             case 3:
                 strMst1 = getString(R.string.mst_argos);  //카드패턴 3
+                //nDrawableId = R.drawable.map_tan2_3;  //카드패턴 3
                 break;
         }
 
         mTv_named.setText("1. " + strMst1 + "\nB. " + strBoss);
+        //mIv_ttsss.setImageResource(nDrawableId);
     }
 
     private void so1() {
@@ -186,19 +193,23 @@ public class Ttsss extends Activity {
         mTv_ttsss.setText(strMap + " 1");
 
         String strBoss = getString(R.string.mst_iron); //카드패턴 0
+        int nDrawableId = R.drawable.map_so1_0;    //카드패턴 0
 
         switch (mCardPatternIndex) {
             case 1:
             case 4:
                 strBoss = getString(R.string.mst_argos);  //카드패턴 1, 4
+                nDrawableId = R.drawable.map_so1_1;    //카드패턴 1, 4
                 break;
             case 2:
             case 3:
                 strBoss = getString(R.string.mst_ramp);  //카드패턴 2, 3
+                nDrawableId = R.drawable.map_so1_2;    //카드패턴 2, 3
                 break;
         }
 
         mTv_named.setText("B. " + strBoss);
+        mIv_ttsss.setImageResource(nDrawableId);
     }
 
     private void so2() {
@@ -210,27 +221,33 @@ public class Ttsss extends Activity {
 
         String strMst1 = getString(R.string.mst_ramp);  //카드패턴 0
         String strBoss = getString(R.string.mst_jakel); //카드패턴 0
+        int nDrawableId = R.drawable.map_so2_0;    //카드패턴 0
 
         switch (mCardPatternIndex) {
             case 1:
                 strMst1 = getString(R.string.mst_karina);  //카드패턴 1
                 strBoss = getString(R.string.mst_iron);    //카드패턴 1
+                nDrawableId = R.drawable.map_so2_1;    //카드패턴 1
                 break;
             case 2:
                 strMst1 = getString(R.string.mst_beki);    //카드패턴 2
                 strBoss = getString(R.string.mst_karina);  //카드패턴 2
+                nDrawableId = R.drawable.map_so2_2;    //카드패턴 2
                 break;
             case 3:
                 strMst1 = getString(R.string.mst_jakel);  //카드패턴 3
                 strBoss = getString(R.string.mst_nerbe);  //카드패턴 3
+                nDrawableId = R.drawable.map_so2_3;    //카드패턴 3
                 break;
             case 4:
                 strMst1 = getString(R.string.mst_beki);  //카드패턴 4
                 strBoss = getString(R.string.mst_red);   //카드패턴 4
+                nDrawableId = R.drawable.map_so2_4;    //카드패턴 4
                 break;
         }
 
         mTv_named.setText("1. " + strMst1 + "\nB. " + strBoss);
+        mIv_ttsss.setImageResource(nDrawableId);
     }
 
     private void so3() {
@@ -241,7 +258,9 @@ public class Ttsss extends Activity {
         mTv_ttsss.setText(strMap + " 3");
 
         String strBoss = getString(R.string.mst_habub);
+        //nDrawableId = R.drawable.map_so3;
 
         mTv_named.setText("B. " + strBoss);
+        //mIv_ttsss.setImageResource(nDrawableId);
     }
 }
