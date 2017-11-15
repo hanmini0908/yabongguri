@@ -1,10 +1,13 @@
 package com.yabongguri.dnflukelaidmap;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -44,6 +47,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.btn_tb:
                 intent = new Intent(this, Tb.class);
                 break;
+            case R.id.btn_hell_channel:
+                intent = new Intent(this, HellChannel.class);
+                break;
             case R.id.btn_close:
                 finish();
                 break;
@@ -51,5 +57,29 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         if (intent != null)
             startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
+        alertdialog.setMessage(getString(R.string.exit_message));
+
+        alertdialog.setPositiveButton(getString(R.string.confirm), new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        alertdialog.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+        AlertDialog alert = alertdialog.create();
+        alert.setTitle(getString(R.string.exit));
+        alert.show();
     }
 }

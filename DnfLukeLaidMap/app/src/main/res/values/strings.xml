@@ -3,6 +3,7 @@
     <string name="card_pattern">카드패 선택</string>
     <string name="jj">저지</string>
     <string name="tb">토벌</string>
+    <string name="hell_channel">헬 채널</string>
 
     <string name="jj_t">탄생의 성소</string>
     <string name="jj_p">파급의 성소</string>
@@ -50,4 +51,9 @@
     <string name="mst_prince">거완의 왕자 골고타 / 철완의 공주 칼바리</string>
     <string name="mst_snaider">정화의 스네이더</string>
     <string name="mst_anubis">어둠의 우상 아누비스</string>
+
+    <string name="exit_message">앱을 종료하시겠습니까?</string>
+    <string name="confirm">확인</string>
+    <string name="cancel">취소</string>
+    <string name="exit">종료</string>
 </resources>

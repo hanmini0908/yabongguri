@@ -28,6 +28,10 @@
             android:label="@string/tb">
         </activity>
         <activity
+            android:name="com.yabongguri.dnflukelaidmap.HellChannel"
+            android:label="@string/hell_channel">
+        </activity>
+        <activity
             android:name="com.yabongguri.dnflukelaidmap.juji.Pppt"
             android:label="파파파탄">
         </activity>
