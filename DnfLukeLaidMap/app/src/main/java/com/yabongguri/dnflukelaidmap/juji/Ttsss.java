@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,6 +34,9 @@ public class Ttsss extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ttsss);
+
+        //Activity에 입력이 없어도 화면 꺼지지 않게 하기
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         mTv_ttsss = (TextView)findViewById(R.id.tv_ttsss);
         mTv_named = (TextView)findViewById(R.id.tv_ttsss_named);
@@ -141,7 +145,8 @@ public class Ttsss extends Activity {
         mBtn_prev.setEnabled(false);
         setBtnVisibility(mIsOthers, false);
 
-        mTv_ttsss.setText("탄생의 성소 1");
+        String strMap = getString(R.string.jj_t);
+        mTv_ttsss.setText(strMap + " 1");
 
         String strBoss = getString(R.string.mst_metal);
 
@@ -152,7 +157,8 @@ public class Ttsss extends Activity {
         mBtn_prev.setEnabled(true);
         setBtnVisibility(mIsOthers, false);
 
-        mTv_ttsss.setText("탄생의 성소 2");
+        String strMap = getString(R.string.jj_t);
+        mTv_ttsss.setText(strMap + " 2");
 
         String strMst1 = getString(R.string.mst_karina);  //카드패턴 0, 4
         String strBoss = getString(R.string.mst_the7);
@@ -176,7 +182,8 @@ public class Ttsss extends Activity {
         mBtn_prev.setEnabled(true);
         setBtnVisibility(mIsOthers, false);
 
-        mTv_ttsss.setText("소멸의 성소 1");
+        String strMap = getString(R.string.jj_s);
+        mTv_ttsss.setText(strMap + " 1");
 
         String strBoss = getString(R.string.mst_iron); //카드패턴 0
 
@@ -198,7 +205,8 @@ public class Ttsss extends Activity {
         mBtn_prev.setEnabled(true);
         setBtnVisibility(mIsOthers, false);
 
-        mTv_ttsss.setText("소멸의 성소 2");
+        String strMap = getString(R.string.jj_s);
+        mTv_ttsss.setText(strMap + " 2");
 
         String strMst1 = getString(R.string.mst_ramp);  //카드패턴 0
         String strBoss = getString(R.string.mst_jakel); //카드패턴 0
@@ -229,7 +237,8 @@ public class Ttsss extends Activity {
         mBtn_prev.setEnabled(true);
         setBtnVisibility(mIsOthers, true);
 
-        mTv_ttsss.setText("소멸의 성소 3");
+        String strMap = getString(R.string.jj_s);
+        mTv_ttsss.setText(strMap + " 3");
 
         String strBoss = getString(R.string.mst_habub);
 

@@ -3,6 +3,7 @@ package com.yabongguri.dnflukelaidmap.juji;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,6 +34,9 @@ public class Pppt extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pppt);
+
+        //Activity에 입력이 없어도 화면 꺼지지 않게 하기
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         mTv_pppt = (TextView)findViewById(R.id.tv_pppt);
         mTv_named = (TextView)findViewById(R.id.tv_pppt_named);
@@ -134,34 +138,41 @@ public class Pppt extends Activity {
         mBtn_prev.setEnabled(false);
         setBtnVisibility(mIsOthers, false);
 
-        mTv_pppt.setText("파급의 성소 1");
+        String strMap = getString(R.string.jj_p);
+        mTv_pppt.setText(strMap + " 1");
 
         String strMst1 = getString(R.string.mst_red);    //카드패턴 0, 2
         String strBoss = getString(R.string.mst_nerbe);  //카드패턴 0, 2
+        int nDrawableId = R.drawable.map_pa1_0;    //카드패턴 0, 2
 
         switch (mCardPatternIndex) {
             case 1:
                 strMst1 = getString(R.string.mst_beki);  //카드패턴 1
                 strBoss = getString(R.string.mst_ramp);  //카드패턴 1, 4
+                nDrawableId = R.drawable.map_pa1_1;    //카드패턴 1
                 break;
             case 3:
                 strMst1 = getString(R.string.mst_karina);  //카드패턴 3
                 strBoss = getString(R.string.mst_red);     //카드패턴 3
+                nDrawableId = R.drawable.map_pa1_3;    //카드패턴 3
                 break;
             case 4:
                 strMst1 = getString(R.string.mst_iron);  //카드패턴 4
                 strBoss = getString(R.string.mst_ramp);  //카드패턴 1, 4
+                nDrawableId = R.drawable.map_pa1_4;    //카드패턴 4
                 break;
         }
 
         mTv_named.setText("1. " + strMst1 + "\nB. " + strBoss);
+        mIv_pppt.setImageResource(nDrawableId);
     }
 
     private void pa2() {
         mBtn_prev.setEnabled(true);
         setBtnVisibility(mIsOthers, false);
 
-        mTv_pppt.setText("파급의 성소 2");
+        String strMap = getString(R.string.jj_p);
+        mTv_pppt.setText(strMap + " 2");
 
         String strMst1 = getString(R.string.mst_argos);  //카드패턴 0, 2
         String strBoss = getString(R.string.mst_mark);
@@ -185,7 +196,8 @@ public class Pppt extends Activity {
         mBtn_prev.setEnabled(true);
         setBtnVisibility(mIsOthers, false);
 
-        mTv_pppt.setText("파급의 성소 3");
+        String strMap = getString(R.string.jj_p);
+        mTv_pppt.setText(strMap + " 3");
 
         String strBoss = getString(R.string.mst_bupon);
 
@@ -196,7 +208,8 @@ public class Pppt extends Activity {
         mBtn_prev.setEnabled(true);
         setBtnVisibility(mIsOthers, true);
 
-        mTv_pppt.setText("탄생의 성소 3");
+        String strMap = getString(R.string.jj_t);
+        mTv_pppt.setText(strMap + " 3");
 
         String strMst1 = getString(R.string.mst_beki);  //카드패턴 0, 3
         String strBoss = getString(R.string.mst_losa);
