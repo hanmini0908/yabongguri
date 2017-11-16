@@ -149,8 +149,8 @@ public class Lumen extends Activity {
         String strBoss = getString(R.string.mst_prince);
         mTv_named.setText("1. " + strMst1 + "\nB. " + strBoss);
 
-        //int nDrawableId = R.drawable.map_tb_lu3;
-        //mIv_lumen.setImageResource(nDrawableId);
+        int nDrawableId = R.drawable.map_tb_lu3;
+        mIv_lumen.setImageResource(nDrawableId);
     }
 
     private void map4() {

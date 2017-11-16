@@ -149,10 +149,10 @@ public class Ttsss extends Activity {
         mTv_ttsss.setText(strMap + " 1");
 
         String strBoss = getString(R.string.mst_metal);
-        //int nDrawableId = R.drawable.map_tan1;
+        int nDrawableId = R.drawable.map_tan1;
 
         mTv_named.setText("B. " + strBoss);
-        //mIv_ttsss.setImageResource(nDrawableId);
+        mIv_ttsss.setImageResource(nDrawableId);
     }
 
     private void tan2() {
@@ -164,25 +164,25 @@ public class Ttsss extends Activity {
 
         String strMst1 = getString(R.string.mst_karina);  //카드패턴 0, 4
         String strBoss = getString(R.string.mst_the7);
-        //int nDrawableId = R.drawable.map_tan2_0;  //카드패턴 0, 4
+        int nDrawableId = R.drawable.map_tan2_0;  //카드패턴 0, 4
 
         switch (mCardPatternIndex) {
             case 1:
                 strMst1 = getString(R.string.mst_red);  //카드패턴 1
-                //nDrawableId = R.drawable.map_tan2_1;  //카드패턴 1
+                nDrawableId = R.drawable.map_tan2_1;  //카드패턴 1
                 break;
             case 2:
                 strMst1 = getString(R.string.mst_iron);  //카드패턴 2
-                //nDrawableId = R.drawable.map_tan2_2;  //카드패턴 2
+                nDrawableId = R.drawable.map_tan2_2;  //카드패턴 2
                 break;
             case 3:
                 strMst1 = getString(R.string.mst_argos);  //카드패턴 3
-                //nDrawableId = R.drawable.map_tan2_3;  //카드패턴 3
+                nDrawableId = R.drawable.map_tan2_3;  //카드패턴 3
                 break;
         }
 
         mTv_named.setText("1. " + strMst1 + "\nB. " + strBoss);
-        //mIv_ttsss.setImageResource(nDrawableId);
+        mIv_ttsss.setImageResource(nDrawableId);
     }
 
     private void so1() {
@@ -258,9 +258,9 @@ public class Ttsss extends Activity {
         mTv_ttsss.setText(strMap + " 3");
 
         String strBoss = getString(R.string.mst_habub);
-        //nDrawableId = R.drawable.map_so3;
+        int nDrawableId = R.drawable.map_so3;
 
         mTv_named.setText("B. " + strBoss);
-        //mIv_ttsss.setImageResource(nDrawableId);
+        mIv_ttsss.setImageResource(nDrawableId);
     }
 }
