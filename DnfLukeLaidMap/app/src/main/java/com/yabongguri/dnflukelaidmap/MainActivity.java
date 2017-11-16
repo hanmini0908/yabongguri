@@ -15,6 +15,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mBtn_jj;
     private Button mBtn_tb;
     private Button mBtn_close;
+    private Button mBtn_hell_channel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtn_jj = (Button)findViewById(R.id.btn_jj);
         mBtn_tb = (Button)findViewById(R.id.btn_tb);
         mBtn_close = (Button)findViewById(R.id.btn_close);
+        mBtn_hell_channel = (Button)findViewById(R.id.btn_hell_channel);
 
         mBtn_card.setOnClickListener(this);
         mBtn_jj.setOnClickListener(this);
         mBtn_tb.setOnClickListener(this);
         mBtn_close.setOnClickListener(this);
+        mBtn_hell_channel.setOnClickListener(this);
     }
 
     public void onClick(View v)
