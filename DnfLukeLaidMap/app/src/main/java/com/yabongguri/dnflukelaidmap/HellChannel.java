@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,13 +35,13 @@ public class HellChannel extends Activity {
         mTextView = (TextView)findViewById(R.id.htmlText);
         mImg = (ImageView)findViewById(R.id.img);
         mAni = (AnimationDrawable) mImg.getDrawable();
-
         mAni.start();
 
         if (savedInstanceState != null && savedInstanceState.getString("Channel") != null) {
             mChannelTitle = savedInstanceState.getString("Channel");
             mTextView.setText(mChannelTitle);
             mTextView.setTextSize(30);
+            mImg.setVisibility(View.VISIBLE);
         } else {
             mHandler = new SetTextViewHandler();
 
@@ -62,6 +63,7 @@ public class HellChannel extends Activity {
                     mChannelTitle = msg.obj.toString();
                     mTextView.setText(mChannelTitle);
                     mTextView.setTextSize(30);
+                    mImg.setVisibility(View.VISIBLE);
                     break;
             }
             super.handleMessage(msg);
