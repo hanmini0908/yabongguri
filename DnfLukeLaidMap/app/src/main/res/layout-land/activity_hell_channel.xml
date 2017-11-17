@@ -3,26 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="vertical">
+    android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|center_vertical">
         <ImageView
             android:id="@+id/img"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center|center_horizontal"
             android:adjustViewBounds="true"
+            android:layout_gravity="center|center_vertical"
             android:src="@drawable/hell_animation"/>
     </LinearLayout>
     <TextView
         android:id="@+id/htmlText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:layout_marginTop="30sp"
         android:text="헬 채널을 선택 중입니다!!"
+        android:textAlignment="center"
         android:layout_gravity="center"/>
 </LinearLayout>

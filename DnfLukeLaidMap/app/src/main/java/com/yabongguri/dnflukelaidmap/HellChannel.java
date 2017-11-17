@@ -1,6 +1,7 @@
 package com.yabongguri.dnflukelaidmap;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,10 +20,11 @@ import java.net.HttpURLConnection;
 
 public class HellChannel extends Activity {
 
-    ImageView mImg;
-    AnimationDrawable mAni;
-    TextView mTextView;
-    Handler mHandler;
+    ImageView mImg = null;
+    AnimationDrawable mAni = null;
+    TextView mTextView = null;
+    Handler mHandler = null;
+    String mChannelTitle = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,30 +32,44 @@ public class HellChannel extends Activity {
         setContentView(R.layout.activity_hell_channel);
 
         mTextView = (TextView)findViewById(R.id.htmlText);
-        mImg =(ImageView)findViewById(R.id.img);
-        mAni =(AnimationDrawable) mImg.getDrawable();
+        mImg = (ImageView)findViewById(R.id.img);
+        mAni = (AnimationDrawable) mImg.getDrawable();
 
         mAni.start();
 
-        mHandler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                switch (msg.what) {
-                    case 1:
-                        mTextView.setText(msg.obj.toString());
-                        break;
-                }
-                super.handleMessage(msg);
+        if (savedInstanceState != null && savedInstanceState.getString("Channel") != null) {
+            mChannelTitle = savedInstanceState.getString("Channel");
+            mTextView.setText(mChannelTitle);
+            mTextView.setTextSize(30);
+        } else {
+            mHandler = new SetTextViewHandler();
+
+            Thread thread = new Thread(new ControlTime()); // Runnable 객체를 통해 작업 스레드 생성
+            thread.start(); // 작업스레드 시작
+        }
+    }
+
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putString("Channel", mChannelTitle);
+        super.onSaveInstanceState(outState);
+    }
+
+    class SetTextViewHandler extends Handler{
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 1:
+                    mChannelTitle = msg.obj.toString();
+                    mTextView.setText(mChannelTitle);
+                    mTextView.setTextSize(30);
+                    break;
             }
-        };
-
-        Thread thread = new Thread(new BackRunnable()); // Runnable 객체를 통해 작업 스레드 생성
-        thread.start(); // 작업스레드 시작
-
+            super.handleMessage(msg);
+        }
     }
 
     // Runnable 인터페이스를 구현한 클래스
-    class BackRunnable implements Runnable{
+    class ControlTime implements Runnable{
         HttpURLConnection http = null;
         BufferedReader in = null;
         // Thread 때와 마찬가지로 run() 메소드 구현
