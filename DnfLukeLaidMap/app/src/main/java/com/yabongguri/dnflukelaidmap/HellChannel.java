@@ -26,6 +26,9 @@ public class HellChannel extends Activity {
     TextView mTextView = null;
     Handler mHandler = null;
     String mChannelTitle = null;
+    TextView mTvDot1;
+    TextView mTvDot2;
+    TextView mTvDot3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,15 +36,15 @@ public class HellChannel extends Activity {
         setContentView(R.layout.activity_hell_channel);
 
         mTextView = (TextView)findViewById(R.id.htmlText);
+        mTvDot1 = (TextView)findViewById(R.id.tvDot1);
+        mTvDot2 = (TextView)findViewById(R.id.tvDot2);
+        mTvDot3 = (TextView)findViewById(R.id.tvDot3);
         mImg = (ImageView)findViewById(R.id.img);
         mAni = (AnimationDrawable) mImg.getDrawable();
-        mAni.start();
 
         if (savedInstanceState != null && savedInstanceState.getString("Channel") != null) {
             mChannelTitle = savedInstanceState.getString("Channel");
-            mTextView.setText(mChannelTitle);
-            mTextView.setTextSize(30);
-            mImg.setVisibility(View.VISIBLE);
+            setVisibleChannel(mChannelTitle);
         } else {
             mHandler = new SetTextViewHandler();
 
@@ -60,14 +63,32 @@ public class HellChannel extends Activity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 1:
+                    mTvDot1.setVisibility(View.VISIBLE);
+                    break;
+                case 2:
+                    mTvDot2.setVisibility(View.VISIBLE);
+                    break;
+                case 3:
+                    mTvDot3.setVisibility(View.VISIBLE);
+                    break;
+                case 4:
                     mChannelTitle = msg.obj.toString();
-                    mTextView.setText(mChannelTitle);
-                    mTextView.setTextSize(30);
-                    mImg.setVisibility(View.VISIBLE);
+                    setVisibleChannel(mChannelTitle);
                     break;
             }
             super.handleMessage(msg);
         }
+    }
+
+    private void setVisibleChannel(String strChannel) {
+        mTvDot1.setVisibility(View.INVISIBLE);
+        mTvDot2.setVisibility(View.INVISIBLE);
+        mTvDot3.setVisibility(View.INVISIBLE);
+
+        mTextView.setText(strChannel);
+        mTextView.setTextSize(30);
+        mImg.setVisibility(View.VISIBLE);
+        mAni.start();
     }
 
     // Runnable 인터페이스를 구현한 클래스
@@ -78,8 +99,16 @@ public class HellChannel extends Activity {
         @Override
         public void run() {
             try {
-                Thread.sleep(1000 * 3);
-                Message msg = mHandler.obtainMessage(1, getHellChannel());
+                Message msg = mHandler.obtainMessage(1, 1);
+                mHandler.sendMessage(msg);
+                Thread.sleep(1000);
+                msg = mHandler.obtainMessage(2, 2);
+                mHandler.sendMessage(msg);
+                Thread.sleep(1000);
+                msg = mHandler.obtainMessage(3, 3);
+                mHandler.sendMessage(msg);
+                Thread.sleep(1000);
+                msg = mHandler.obtainMessage(4, getHellChannel());
                 mHandler.sendMessage(msg);
             } catch (InterruptedException e) {
                 e.printStackTrace();
