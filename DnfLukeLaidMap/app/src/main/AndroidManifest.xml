@@ -55,6 +55,10 @@
             android:name="com.yabongguri.dnflukelaidmap.tobul.Energy"
             android:label="에너지 제어실/저장소">
         </activity>
+        <activity
+            android:name="com.yabongguri.dnflukelaidmap.tobul.Success"
+            android:label="루크 레이드 성공">
+        </activity>
     </application>
 
 </manifest>

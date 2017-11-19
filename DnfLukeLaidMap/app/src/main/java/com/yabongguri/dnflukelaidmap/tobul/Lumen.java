@@ -74,10 +74,14 @@ public class Lumen extends Activity {
     }
 
     public void onClickNext(View v) {
-        if (mMapIndex < 4)
+        if (mMapIndex < 4) {
             mMapIndex++;
-
-        viewMapIndex();
+            viewMapIndex();
+        }
+        else if (mMapIndex == 4) {
+            Intent intent = new Intent(this, Success.class);
+            startActivity(intent);
+        }
     }
 
     public void onClickEnergy(View v) {
@@ -97,7 +101,6 @@ public class Lumen extends Activity {
 
     private void map1() {
         mBtn_prev.setEnabled(false);
-        mBtn_next.setEnabled(true);
 
         String strMap = getString(R.string.tb_lu1);
         mTv_lumen.setText(strMap);
@@ -113,7 +116,6 @@ public class Lumen extends Activity {
 
     private void map2() {
         mBtn_prev.setEnabled(true);
-        mBtn_next.setEnabled(true);
 
         String strMap = getString(R.string.tb_lu2);
         mTv_lumen.setText(strMap);
@@ -128,7 +130,6 @@ public class Lumen extends Activity {
 
     private void map3() {
         mBtn_prev.setEnabled(true);
-        mBtn_next.setEnabled(true);
 
         String strMap = getString(R.string.tb_lu3);
         mTv_lumen.setText(strMap);
@@ -143,7 +144,6 @@ public class Lumen extends Activity {
 
     private void map4() {
         mBtn_prev.setEnabled(true);
-        mBtn_next.setEnabled(true);
 
         String strMap = getString(R.string.tb_lu4);
         mTv_lumen.setText(strMap);
@@ -158,7 +158,6 @@ public class Lumen extends Activity {
 
     private void map5() {
         mBtn_prev.setEnabled(true);
-        mBtn_next.setEnabled(false);
 
         String strMap = getString(R.string.tb_lumen);
         mTv_lumen.setText(strMap);

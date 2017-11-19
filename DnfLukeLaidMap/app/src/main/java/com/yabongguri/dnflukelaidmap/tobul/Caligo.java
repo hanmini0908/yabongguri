@@ -74,10 +74,14 @@ public class Caligo extends Activity {
     }
 
     public void onClickNext(View v) {
-        if (mMapIndex < 4)
+        if (mMapIndex < 4) {
             mMapIndex++;
-
-        viewMapIndex();
+            viewMapIndex();
+        }
+        else if (mMapIndex == 4) {
+            Intent intent = new Intent(this, Success.class);
+            startActivity(intent);
+        }
     }
 
     public void onClickEnergy(View v) {
@@ -97,7 +101,6 @@ public class Caligo extends Activity {
 
     private void map1() {
         mBtn_prev.setEnabled(false);
-        mBtn_next.setEnabled(true);
 
         String strMap = getString(R.string.tb_cal1);
         mTv_caligo.setText(strMap);
@@ -113,7 +116,6 @@ public class Caligo extends Activity {
 
     private void map2() {
         mBtn_prev.setEnabled(true);
-        mBtn_next.setEnabled(true);
 
         String strMap = getString(R.string.tb_cal2);
         mTv_caligo.setText(strMap);
@@ -128,7 +130,6 @@ public class Caligo extends Activity {
 
     private void map3() {
         mBtn_prev.setEnabled(true);
-        mBtn_next.setEnabled(true);
 
         String strMap = getString(R.string.tb_cal3);
         mTv_caligo.setText(strMap);
@@ -143,7 +144,6 @@ public class Caligo extends Activity {
 
     private void map4() {
         mBtn_prev.setEnabled(true);
-        mBtn_next.setEnabled(true);
 
         String strMap = getString(R.string.tb_cal4);
         mTv_caligo.setText(strMap);
@@ -158,7 +158,6 @@ public class Caligo extends Activity {
 
     private void map5() {
         mBtn_prev.setEnabled(true);
-        mBtn_next.setEnabled(false);
 
         String strMap = getString(R.string.tb_caligo);
         mTv_caligo.setText(strMap);
