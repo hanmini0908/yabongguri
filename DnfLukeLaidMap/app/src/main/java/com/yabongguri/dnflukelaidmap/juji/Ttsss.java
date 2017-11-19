@@ -48,12 +48,28 @@ public class Ttsss extends Activity {
 
         mCardPatternIndex = RuntimeConfig.getCardPreference(this);
 
-        mMapIndex = 0;
-        mIsOthers = false;
-        Intent intent = getIntent();
-        mMapIndex = intent.getIntExtra("mapIndex", 0);
-        mIsOthers = intent.getBooleanExtra("isOthers", false);
+        if (savedInstanceState == null) {
+            mMapIndex = 0;
+            mIsOthers = false;
 
+            Intent intent = getIntent();
+            if (intent != null) {
+                mMapIndex = intent.getIntExtra("mapIndex", 0);
+                mIsOthers = intent.getBooleanExtra("isOthers", false);
+            }
+        } else {
+            mMapIndex = savedInstanceState.getInt("MapIndex");
+        }
+
+        viewMapIndex();
+    }
+
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putInt("MapIndex", mMapIndex);
+        super.onSaveInstanceState(outState);
+    }
+
+    private void viewMapIndex() {
         if (mMapIndex == 0)
             tan1();
         else if (mMapIndex == 1)
@@ -70,40 +86,14 @@ public class Ttsss extends Activity {
         if (mMapIndex > 0)
             mMapIndex--;
 
-        switch (mMapIndex) {
-            case 0:
-                tan1();
-                break;
-            case 1:
-                tan2();
-                break;
-            case 2:
-                so1();
-                break;
-            case 3:
-                so2();
-                break;
-        }
+        viewMapIndex();
     }
 
     public void onClickNext(View v) {
         if (mMapIndex < 4)
             mMapIndex++;
 
-        switch (mMapIndex) {
-            case 1:
-                tan2();
-                break;
-            case 2:
-                so1();
-                break;
-            case 3:
-                so2();
-                break;
-            case 4:
-                so3();
-                break;
-        }
+        viewMapIndex();
     }
 
     public void onClickOthersMap(View v) {
@@ -117,8 +107,8 @@ public class Ttsss extends Activity {
         startActivity(intent);
     }
 
-    private void setBtnVisibility(boolean isOthers, boolean isLastMap) {
-        if (!isOthers) {
+    private void setBtnVisibility(boolean isLastMap) {
+        if (!mIsOthers) {
             if (!isLastMap) {
                 mBtn_prev.setVisibility(View.VISIBLE);
                 mBtn_next.setVisibility(View.VISIBLE);
@@ -143,7 +133,7 @@ public class Ttsss extends Activity {
 
     private void tan1() {
         mBtn_prev.setEnabled(false);
-        setBtnVisibility(mIsOthers, false);
+        setBtnVisibility(false);
 
         String strMap = getString(R.string.jj_t);
         mTv_ttsss.setText(strMap + " 1");
@@ -157,7 +147,7 @@ public class Ttsss extends Activity {
 
     private void tan2() {
         mBtn_prev.setEnabled(true);
-        setBtnVisibility(mIsOthers, false);
+        setBtnVisibility(false);
 
         String strMap = getString(R.string.jj_t);
         mTv_ttsss.setText(strMap + " 2");
@@ -187,7 +177,7 @@ public class Ttsss extends Activity {
 
     private void so1() {
         mBtn_prev.setEnabled(true);
-        setBtnVisibility(mIsOthers, false);
+        setBtnVisibility(false);
 
         String strMap = getString(R.string.jj_s);
         mTv_ttsss.setText(strMap + " 1");
@@ -214,7 +204,7 @@ public class Ttsss extends Activity {
 
     private void so2() {
         mBtn_prev.setEnabled(true);
-        setBtnVisibility(mIsOthers, false);
+        setBtnVisibility(false);
 
         String strMap = getString(R.string.jj_s);
         mTv_ttsss.setText(strMap + " 2");
@@ -252,7 +242,7 @@ public class Ttsss extends Activity {
 
     private void so3() {
         mBtn_prev.setEnabled(true);
-        setBtnVisibility(mIsOthers, true);
+        setBtnVisibility(true);
 
         String strMap = getString(R.string.jj_s);
         mTv_ttsss.setText(strMap + " 3");

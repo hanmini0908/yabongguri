@@ -38,8 +38,22 @@ public class Lumen extends Activity {
         mBtn_prev = (Button)findViewById(R.id.btn_lumen_prev);
         mBtn_next = (Button)findViewById(R.id.btn_lumen_next);
 
-        mMapIndex = 0;
+        if (savedInstanceState == null) {
+            mMapIndex = 0;
 
+        } else {
+            mMapIndex = savedInstanceState.getInt("MapIndex");
+        }
+
+        viewMapIndex();
+    }
+
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putInt("MapIndex", mMapIndex);
+        super.onSaveInstanceState(outState);
+    }
+
+    private void viewMapIndex() {
         if (mMapIndex == 0)
             map1();
         else if (mMapIndex == 1)
@@ -56,40 +70,14 @@ public class Lumen extends Activity {
         if (mMapIndex > 0)
             mMapIndex--;
 
-        switch (mMapIndex) {
-            case 0:
-                map1();
-                break;
-            case 1:
-                map2();
-                break;
-            case 2:
-                map3();
-                break;
-            case 3:
-                map4();
-                break;
-        }
+        viewMapIndex();
     }
 
     public void onClickNext(View v) {
         if (mMapIndex < 4)
             mMapIndex++;
 
-        switch (mMapIndex) {
-            case 1:
-                map2();
-                break;
-            case 2:
-                map3();
-                break;
-            case 3:
-                map4();
-                break;
-            case 4:
-                map5();
-                break;
-        }
+        viewMapIndex();
     }
 
     public void onClickEnergy(View v) {
