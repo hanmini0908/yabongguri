@@ -1,6 +1,7 @@
 package com.yabongguri.dnflukelaidmap;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,7 +39,8 @@ public class CardPattern extends Activity implements View.OnClickListener {
             int nIndex = mRg_tan.indexOfChild(radioButton);
 
             RuntimeConfig.setCardPreference(this, nIndex);
-            finish();
+            Intent intent = new Intent(this, Jj.class);
+            startActivity(intent);
         }
     }
 }
