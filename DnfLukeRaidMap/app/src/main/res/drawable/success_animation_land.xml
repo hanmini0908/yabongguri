@@ -1,0 +1,8 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/cong_land1"
+        android:duration="300"/>
+    <item android:drawable="@drawable/cong_land2"
+        android:duration="300"/>
+    <item android:drawable="@drawable/cong_land3"
+        android:duration="300"/>
+</animation-list>

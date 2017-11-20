@@ -15,7 +15,7 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center|center_horizontal"
             android:adjustViewBounds="true"
-            android:src="@drawable/success_animation"/>
+            android:src="@drawable/success_animation_land"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
