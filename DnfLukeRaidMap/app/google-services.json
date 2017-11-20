@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "67406103051",
+    "firebase_url": "https://dnflukeraidmap.firebaseio.com",
+    "project_id": "dnflukeraidmap",
+    "storage_bucket": "dnflukeraidmap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67406103051:android:fde0759e2337f70e",
+        "android_client_info": {
+          "package_name": "com.yabongguri.dnflukeraidmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67406103051-tm7n9k9qpskcdlca4te7dm74ikve68h3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yabongguri.dnflukeraidmap",
+            "certificate_hash": "a665956b6f78d670bdb5af215b73f508804cd389"
+          }
+        },
+        {
+          "client_id": "67406103051-v7966pnprlc24natjsb67u6ufmdoi1sc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3qe3g-s9B0EbP-KXgnwbQTDu9NMKfD10"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67406103051-v7966pnprlc24natjsb67u6ufmdoi1sc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
