@@ -1,4 +1,7 @@
 <resources>
+    <string name="version">Version 1.0.0</string>
+    <string name="email">문의/개선사항 및 버그신고 : yabongguri@gmail.com</string>
+
     <string name="app_name">던파 루크레이드 맵</string>
     <string name="card_pattern">카드패 선택</string>
     <string name="jj">저지</string>
