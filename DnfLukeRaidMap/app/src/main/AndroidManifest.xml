@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.yabongguri.dnflukeraidmap">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.CardPattern"
+            android:label="@string/card_pattern">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.Jj"
+            android:label="@string/jj">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.Tb"
+            android:label="@string/tb">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.HellChannel"
+            android:label="@string/hell_channel">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.Pppt"
+            android:label="파파파탄">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.Ttsss"
+            android:label="탄탄소소소">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.Others"
+            android:label="저지 맵 선택">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.Lumen"
+            android:label="빛">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.Caligo"
+            android:label="어둠">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.Energy"
+            android:label="에너지 제어실/저장소">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.Success"
+            android:label="루크 레이드 성공">
+        </activity>
+    </application>
+
+</manifest>
