@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -17,6 +19,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mBtn_tb;
     private Button mBtn_close;
     private Button mBtn_hell_channel;
+    private ImageView mImg_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +36,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtn_tb = (Button)findViewById(R.id.btn_tb);
         mBtn_close = (Button)findViewById(R.id.btn_close);
         mBtn_hell_channel = (Button)findViewById(R.id.btn_hell_channel);
+        mImg_email = (ImageView) findViewById(R.id.img_email);
 
         mBtn_jj.setOnClickListener(this);
         mBtn_tb.setOnClickListener(this);
         mBtn_close.setOnClickListener(this);
         mBtn_hell_channel.setOnClickListener(this);
+        mImg_email.setOnClickListener(this);
     }
 
     public void onClick(View v)
@@ -57,6 +62,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn_close:
                 finishApp();
+                break;
+            case R.id.img_email:
+                sendEmail("yabongguri@gmail.com");
                 break;
         }
 
@@ -86,6 +94,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
         AlertDialog alert = alertdialog.create();
         alert.setTitle(getString(R.string.exit));
         alert.show();
+    }
+
+    private void sendEmail(String email){
+        try{
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
+            emailIntent.setType("plain/text");
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.email_chooser)));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private void finishApp() {
