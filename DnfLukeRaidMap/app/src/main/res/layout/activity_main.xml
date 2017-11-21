@@ -70,16 +70,16 @@
         android:layout_marginBottom="10dp"
         android:gravity="center">
         <Button
-            android:text="@string/jj"
+            android:text="@string/il"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_jj"
+            android:id="@+id/btn_il"
             android:layout_gravity="center_horizontal"/>
         <Button
-            android:text="@string/tb"
+            android:text="@string/lr"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_tb"
+            android:id="@+id/btn_lr"
             android:layout_gravity="center_horizontal"/>
         <Button
             android:layout_marginTop="20dp"

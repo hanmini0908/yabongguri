@@ -15,13 +15,14 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.yabongguri.dnflukeraidmap.illuke.IlMapSelect;
 
 import org.w3c.dom.Text;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private Button mBtn_jj;
-    private Button mBtn_tb;
+    private Button mBtn_il;
+    private Button mBtn_lr;
     private Button mBtn_close;
     private Button mBtn_hell_channel;
     private ImageView mImg_email;
@@ -38,15 +39,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
             adView.loadAd(adRequest);
         }
 
-        mBtn_jj = (Button)findViewById(R.id.btn_jj);
-        mBtn_tb = (Button)findViewById(R.id.btn_tb);
+        mBtn_il = (Button)findViewById(R.id.btn_il);
+        mBtn_lr = (Button)findViewById(R.id.btn_lr);
         mBtn_close = (Button)findViewById(R.id.btn_close);
         mBtn_hell_channel = (Button)findViewById(R.id.btn_hell_channel);
         mImg_email = (ImageView)findViewById(R.id.img_email);
         mTv_version = (TextView)findViewById(R.id.tv_version);
 
-        mBtn_jj.setOnClickListener(this);
-        mBtn_tb.setOnClickListener(this);
+        mBtn_il.setOnClickListener(this);
+        mBtn_lr.setOnClickListener(this);
         mBtn_close.setOnClickListener(this);
         mBtn_hell_channel.setOnClickListener(this);
         mImg_email.setOnClickListener(this);
@@ -70,11 +71,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         switch (v.getId())
         {
-            case R.id.btn_jj:
-                intent = new Intent(this, CardPattern.class);
+            case R.id.btn_il:
+                intent = new Intent(this, IlMapSelect.class);
                 break;
-            case R.id.btn_tb:
-                intent = new Intent(this, Tb.class);
+            case R.id.btn_lr:
+                intent = new Intent(this, CardPattern.class);
                 break;
             case R.id.btn_hell_channel:
                 intent = new Intent(this, HellChannel.class);

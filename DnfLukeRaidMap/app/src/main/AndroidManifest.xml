@@ -59,6 +59,14 @@
             android:name="com.yabongguri.dnflukeraidmap.tobul.Success"
             android:label="루크 레이드 성공">
         </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap"
+            android:label="일루크">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.illuke.IlMapSelect"
+            android:label="일루크 맵 선택">
+        </activity>
     </application>
 
 </manifest>
