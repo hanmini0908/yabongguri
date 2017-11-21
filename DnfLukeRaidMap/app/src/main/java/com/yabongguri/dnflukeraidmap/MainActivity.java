@@ -4,14 +4,19 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.Activity;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -20,6 +25,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mBtn_close;
     private Button mBtn_hell_channel;
     private ImageView mImg_email;
+    private TextView mTv_version;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +42,26 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBtn_tb = (Button)findViewById(R.id.btn_tb);
         mBtn_close = (Button)findViewById(R.id.btn_close);
         mBtn_hell_channel = (Button)findViewById(R.id.btn_hell_channel);
-        mImg_email = (ImageView) findViewById(R.id.img_email);
+        mImg_email = (ImageView)findViewById(R.id.img_email);
+        mTv_version = (TextView)findViewById(R.id.tv_version);
 
         mBtn_jj.setOnClickListener(this);
         mBtn_tb.setOnClickListener(this);
         mBtn_close.setOnClickListener(this);
         mBtn_hell_channel.setOnClickListener(this);
         mImg_email.setOnClickListener(this);
+
+        //version name 가져오는 코드
+        PackageInfo pInfo = null;
+        try {
+            pInfo = getPackageManager().getPackageInfo(this.getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        if (pInfo != null) {
+            String strVersion = pInfo.versionName;
+            mTv_version.setText(" " + strVersion);
+        }
     }
 
     public void onClick(View v)
