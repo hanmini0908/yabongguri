@@ -16,8 +16,7 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.yabongguri.dnflukeraidmap.illuke.IlMapSelect;
-
-import org.w3c.dom.Text;
+import com.yabongguri.dnflukeraidmap.juji.CardPattern;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -75,7 +74,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 intent = new Intent(this, IlMapSelect.class);
                 break;
             case R.id.btn_lr:
-                intent = new Intent(this, CardPattern.class);
+                intent = new Intent(this, LukeRaid.class);
                 break;
             case R.id.btn_hell_channel:
                 intent = new Intent(this, HellChannel.class);

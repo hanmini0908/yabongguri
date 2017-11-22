@@ -1,10 +1,12 @@
-package com.yabongguri.dnflukeraidmap;
+package com.yabongguri.dnflukeraidmap.juji;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.yabongguri.dnflukeraidmap.R;
 import com.yabongguri.dnflukeraidmap.juji.Pppt;
 import com.yabongguri.dnflukeraidmap.juji.Ttsss;
 import com.yabongguri.dnflukeraidmap.juji.Others;

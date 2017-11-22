@@ -1,4 +1,4 @@
-package com.yabongguri.dnflukeraidmap;
+package com.yabongguri.dnflukeraidmap.juji;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.yabongguri.dnflukeraidmap.R;
+import com.yabongguri.dnflukeraidmap.RuntimeConfig;
 
 /**
  * Created by BitnaKeum on 2017-11-11.

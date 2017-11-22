@@ -1,4 +1,4 @@
-package com.yabongguri.dnflukeraidmap;
+package com.yabongguri.dnflukeraidmap.tobul;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.yabongguri.dnflukeraidmap.R;
 import com.yabongguri.dnflukeraidmap.tobul.Lumen;
 import com.yabongguri.dnflukeraidmap.tobul.Caligo;
 

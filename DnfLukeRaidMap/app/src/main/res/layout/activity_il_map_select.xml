@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
+        android:id="@+id/iv_il_select"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/il_map_select"/>
+        android:src="@drawable/il_map_select"
+        android:adjustViewBounds="true"/>
 </LinearLayout>

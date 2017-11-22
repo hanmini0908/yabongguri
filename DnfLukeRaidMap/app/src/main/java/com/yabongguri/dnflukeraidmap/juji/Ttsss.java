@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.yabongguri.dnflukeraidmap.R;
 import com.yabongguri.dnflukeraidmap.RuntimeConfig;
-import com.yabongguri.dnflukeraidmap.Tb;
+import com.yabongguri.dnflukeraidmap.tobul.Tb;
 
 /**
  * Created by BitnaKeum on 2017-11-13.

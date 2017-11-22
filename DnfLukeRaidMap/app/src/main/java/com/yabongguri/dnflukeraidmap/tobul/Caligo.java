@@ -40,7 +40,6 @@ public class Caligo extends Activity {
 
         if (savedInstanceState == null) {
             mMapIndex = 0;
-
         } else {
             mMapIndex = savedInstanceState.getInt("MapIndex");
         }

@@ -16,15 +16,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.yabongguri.dnflukeraidmap.CardPattern"
+            android:name="com.yabongguri.dnflukeraidmap.LukeRaid"
+            android:label="@string/lr">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.CardPattern"
             android:label="@string/card_pattern">
         </activity>
         <activity
-            android:name="com.yabongguri.dnflukeraidmap.Jj"
+            android:name="com.yabongguri.dnflukeraidmap.juji.Jj"
             android:label="@string/jj">
         </activity>
         <activity
-            android:name="com.yabongguri.dnflukeraidmap.Tb"
+            android:name="com.yabongguri.dnflukeraidmap.tobul.Tb"
             android:label="@string/tb">
         </activity>
         <activity
