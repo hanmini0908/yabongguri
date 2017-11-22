@@ -6,6 +6,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -19,8 +20,11 @@ import com.yabongguri.dnflukeraidmap.R;
 
 public class Success extends Activity {
 
+    private TextView mTvSuccess;
     private ImageView mImgCong;
     private  AnimationDrawable mAniCong;
+
+    private boolean mIsRaid;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +36,20 @@ public class Success extends Activity {
             adView.loadAd(adRequest);
         }
 
+        mTvSuccess = (TextView)findViewById(R.id.tv_success);
         mImgCong = (ImageView)findViewById(R.id.imgCong);
         mAniCong = (AnimationDrawable) mImgCong.getDrawable();
         mAniCong.start();
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            mIsRaid = intent.getBooleanExtra("isRaid", true);
+        }
+
+        if (mIsRaid)
+            mTvSuccess.setText("루크 레이드 저지/토벌\n성공을 축하드립니다!");
+        else
+            mTvSuccess.setText("일루크 성공을\n축하드립니다!");
     }
 
     public void onClickGoHome(View v) {

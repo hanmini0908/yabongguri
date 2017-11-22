@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yabongguri.dnflukeraidmap.R;
+import com.yabongguri.dnflukeraidmap.tobul.Success;
 
 import java.util.Locale;
 
@@ -22,7 +23,7 @@ public class IllukeMap extends Activity {
     private TextView mTv_il;
     private TextView mTv_named;
     private ImageView mIv_il;
-    private Button mBtn_il_select;
+    private Button mBtn_prev;
 
     private int mMapIndex;
 
@@ -37,6 +38,7 @@ public class IllukeMap extends Activity {
         mTv_il = (TextView)findViewById(R.id.tv_il);
         mTv_named = (TextView)findViewById(R.id.tv_il_named);
         mIv_il = (ImageView)findViewById(R.id.iv_il);
+        mBtn_prev = (Button)findViewById(R.id.btn_il_prev);
 
         if (savedInstanceState == null) {
             mMapIndex = 0;
@@ -71,7 +73,28 @@ public class IllukeMap extends Activity {
             luke();
     }
 
+    public void onClickPrev(View v) {
+        if (mMapIndex > 0)
+            mMapIndex--;
+
+        viewMapIndex();
+    }
+
+    public void onClickNext(View v) {
+        if (mMapIndex < 5) {
+            mMapIndex++;
+            viewMapIndex();
+        }
+        else if (mMapIndex == 5) {
+            Intent intent = new Intent(this, Success.class);
+            intent.putExtra("isRaid", false);
+            startActivity(intent);
+        }
+    }
+
     private void tan() {
+        mBtn_prev.setEnabled(false);
+
         String strMap = getString(R.string.jj_t);
         mTv_il.setText(strMap);
 
@@ -87,6 +110,8 @@ public class IllukeMap extends Activity {
         mIv_il.setImageResource(nDrawableId);
     }
     private void so() {
+        mBtn_prev.setEnabled(true);
+
         String strMap = getString(R.string.jj_s);
         mTv_il.setText(strMap);
 
@@ -104,6 +129,8 @@ public class IllukeMap extends Activity {
     }
 
     private void pa() {
+        mBtn_prev.setEnabled(true);
+
         String strMap = getString(R.string.jj_p);
         mTv_il.setText(strMap);
 
@@ -123,6 +150,8 @@ public class IllukeMap extends Activity {
     }
 
     private void lu() {
+        mBtn_prev.setEnabled(true);
+
         String strMap = getString(R.string.tb_lu2);
         mTv_il.setText(strMap);
 
@@ -140,6 +169,8 @@ public class IllukeMap extends Activity {
     }
 
     private void cal() {
+        mBtn_prev.setEnabled(true);
+
         String strMap = getString(R.string.tb_cal2);
         mTv_il.setText(strMap);
 

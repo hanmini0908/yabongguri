@@ -22,9 +22,9 @@
             android:layout_gravity="center"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/tv_success"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="루크 레이드 저지/토벌\n성공을 축하드립니다!"
                 android:textSize="20dp"
                 android:textAlignment="center"
                 android:textColor="#FF0000"/>
