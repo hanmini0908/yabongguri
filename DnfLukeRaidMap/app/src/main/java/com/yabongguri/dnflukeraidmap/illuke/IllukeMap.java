@@ -74,10 +74,14 @@ public class IllukeMap extends Activity {
     }
 
     public void onClickPrev(View v) {
-        if (mMapIndex > 0)
+        if (mMapIndex > 0) {
             mMapIndex--;
-
-        viewMapIndex();
+            viewMapIndex();
+        }
+        else if (mMapIndex == 0) {
+            Intent intent = new Intent(this, IlMapSelect.class);
+            startActivity(intent);
+        }
     }
 
     public void onClickNext(View v) {
@@ -93,8 +97,6 @@ public class IllukeMap extends Activity {
     }
 
     private void tan() {
-        mBtn_prev.setEnabled(false);
-
         String strMap = getString(R.string.jj_t);
         mTv_il.setText(strMap);
 
@@ -110,8 +112,6 @@ public class IllukeMap extends Activity {
         mIv_il.setImageResource(nDrawableId);
     }
     private void so() {
-        mBtn_prev.setEnabled(true);
-
         String strMap = getString(R.string.jj_s);
         mTv_il.setText(strMap);
 
@@ -129,8 +129,6 @@ public class IllukeMap extends Activity {
     }
 
     private void pa() {
-        mBtn_prev.setEnabled(true);
-
         String strMap = getString(R.string.jj_p);
         mTv_il.setText(strMap);
 
@@ -150,8 +148,6 @@ public class IllukeMap extends Activity {
     }
 
     private void lu() {
-        mBtn_prev.setEnabled(true);
-
         String strMap = getString(R.string.tb_lu2);
         mTv_il.setText(strMap);
 
@@ -169,8 +165,6 @@ public class IllukeMap extends Activity {
     }
 
     private void cal() {
-        mBtn_prev.setEnabled(true);
-
         String strMap = getString(R.string.tb_cal2);
         mTv_il.setText(strMap);
 
