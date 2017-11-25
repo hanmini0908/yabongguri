@@ -79,8 +79,7 @@ public class IllukeMap extends Activity {
             viewMapIndex();
         }
         else if (mMapIndex == 0) {
-            Intent intent = new Intent(this, IlMapSelect.class);
-            startActivity(intent);
+            finish();
         }
     }
 
