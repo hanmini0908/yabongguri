@@ -65,11 +65,11 @@
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap"
-            android:label="일루크">
+            android:label="일반루크">
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.illuke.IlMapSelect"
-            android:label="일루크 맵 선택">
+            android:label="일반루크 맵 선택">
         </activity>
     </application>
 
