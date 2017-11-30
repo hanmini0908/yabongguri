@@ -98,7 +98,7 @@ public class SingleRaidSat extends Activity {
 
     private void sat_tan() {
         String strMap = getString(R.string.jj_t);
-        int nDrawableId = R.drawable.map_il_tan;
+        int nDrawableId = R.drawable.map_sg_sat1;
 
         String strMst1 = getString(R.string.mst_mistral);
         String strBoss = getString(R.string.mst_losa);
@@ -109,7 +109,7 @@ public class SingleRaidSat extends Activity {
 
     private void sat_pa() {
         String strMap = getString(R.string.jj_p);
-        int nDrawableId = R.drawable.map_il_tan;
+        int nDrawableId = R.drawable.map_sg_sat2;
 
         String strMst1 = getString(R.string.mst_argos);
         String strMst2 = getString(R.string.mst_karina);
@@ -122,7 +122,7 @@ public class SingleRaidSat extends Activity {
 
     private void sat_cal2() {
         String strMap = getString(R.string.tb_cal2);
-        int nDrawableId = R.drawable.map_il_tan;
+        int nDrawableId = R.drawable.map_sg_sat3;
 
         String strMst1 = getString(R.string.mst_yasin);
         String strBoss = getString(R.string.mst_anubis);
@@ -133,7 +133,7 @@ public class SingleRaidSat extends Activity {
 
     private void sat_cal3() {
         String strMap = getString(R.string.tb_cal3);
-        int nDrawableId = R.drawable.map_il_tan;
+        int nDrawableId = R.drawable.map_sg_sat4;
 
         String strMst1 = getString(R.string.mst_snaider);
         String strBoss = getString(R.string.mst_beara);
@@ -144,7 +144,7 @@ public class SingleRaidSat extends Activity {
 
     private void sat_cal4() {
         String strMap = getString(R.string.tb_cal4);
-        int nDrawableId = R.drawable.map_il_tan;
+        int nDrawableId = R.drawable.map_sg_sat5;
 
         String strMst1 = getString(R.string.mst_mark);
         String strBoss = getString(R.string.mst_nerbe);
