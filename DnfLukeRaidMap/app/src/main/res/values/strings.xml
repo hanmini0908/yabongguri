@@ -5,14 +5,29 @@
 
     <string name="app_name">던파 루크레이드 맵</string>
     <string name="card_pattern">카드패 선택</string>
-    <string name="il">일반루크</string>
+    <string name="il">일반 루크</string>
+    <string name="sr">싱글 레이드</string>
     <string name="lr">루크 레이드</string>
     <string name="jj">저지</string>
     <string name="tb">토벌</string>
     <string name="hell_channel">헬 채널</string>
     <string name="banner_ad_unit_id">ca-app-pub-1028137355062989/6823403850</string>
 
-    <string name="il_luke">솔리움 마키나</string>
+    <string name="jj_pppt">파파파탄</string>
+    <string name="jj_ttsss">탄탄소소소</string>
+    <string name="jj_others">저지 맵 선택</string>
+    <string name="tb_lu">빛</string>
+    <string name="tb_cal">어둠</string>
+    <string name="tb_energy">에너지 제어실/저장소</string>
+    <string name="success">루크 성공</string>
+    <string name="il_select">일반 루크 맵 선택</string>
+    <string name="il_luke">일반 루크</string>
+    <string name="single_select">싱글 루크 맵 선택</string>
+    <string name="single_luke">싱글 루크</string>
+    <string name="single_tue">화요일</string>
+    <string name="single_sat">토요일</string>
+
+    <string name="il_sm">솔리움 마키나</string>
 
     <string name="jj_t">탄생의 성소</string>
     <string name="jj_p">파급의 성소</string>
@@ -38,7 +53,7 @@
     <string name="ts_card5">1. 오염의 카리나\n2. 하이퍼스피드 자켈리네</string>
 
     <string name="mst_metal">메탈기어 카나프스</string>
-    <string name="mst_the7">더 세븐 미스트랄</string>
+    <string name="mst_mistral">더 세븐 미스트랄</string>
     <string name="mst_losa">점성술사 로사우라</string>
     <string name="mst_mark">콰트로 마누스 Mark-Ⅱ</string>
     <string name="mst_bupon">비통의 부폰</string>

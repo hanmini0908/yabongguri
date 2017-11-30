@@ -37,39 +37,51 @@
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.juji.Pppt"
-            android:label="파파파탄">
+            android:label="@string/jj_pppt">
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.juji.Ttsss"
-            android:label="탄탄소소소">
+            android:label="@string/jj_ttsss">
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.juji.Others"
-            android:label="저지 맵 선택">
+            android:label="@string/jj_others">
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.tobul.Lumen"
-            android:label="빛">
+            android:label="@string/tb_lu">
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.tobul.Caligo"
-            android:label="어둠">
+            android:label="@string/tb_cal">
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.tobul.Energy"
-            android:label="에너지 제어실/저장소">
+            android:label="@string/tb_energy">
         </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.tobul.Success"
-            android:label="루크 레이드 성공">
+            android:label="@string/success">
         </activity>
+        <activity
+        android:name="com.yabongguri.dnflukeraidmap.illuke.IlMapSelect"
+        android:label="@string/il_select">
+    </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap"
-            android:label="일반루크">
+            android:label="@string/il_luke">
         </activity>
         <activity
-            android:name="com.yabongguri.dnflukeraidmap.illuke.IlMapSelect"
-            android:label="일반루크 맵 선택">
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleSelect"
+            android:label="@string/single_select">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidTue"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSat"
+            android:label="@string/single_luke">
         </activity>
     </application>
 

@@ -16,12 +16,13 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.yabongguri.dnflukeraidmap.illuke.IlMapSelect;
-import com.yabongguri.dnflukeraidmap.juji.CardPattern;
+import com.yabongguri.dnflukeraidmap.single.SingleSelect;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
     private Button mBtn_il;
     private Button mBtn_lr;
+    private Button mBtn_sr;
     private Button mBtn_close;
     private Button mBtn_hell_channel;
     private ImageView mImg_email;
@@ -40,6 +41,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         mBtn_il = (Button)findViewById(R.id.btn_il);
         mBtn_lr = (Button)findViewById(R.id.btn_lr);
+        mBtn_sr = (Button)findViewById(R.id.btn_sr);
         mBtn_close = (Button)findViewById(R.id.btn_close);
         mBtn_hell_channel = (Button)findViewById(R.id.btn_hell_channel);
         mImg_email = (ImageView)findViewById(R.id.img_email);
@@ -47,6 +49,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         mBtn_il.setOnClickListener(this);
         mBtn_lr.setOnClickListener(this);
+        mBtn_sr.setOnClickListener(this);
         mBtn_close.setOnClickListener(this);
         mBtn_hell_channel.setOnClickListener(this);
         mImg_email.setOnClickListener(this);
@@ -75,6 +78,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn_lr:
                 intent = new Intent(this, LukeRaid.class);
+                break;
+            case R.id.btn_sr:
+                intent = new Intent(this, SingleSelect.class);
                 break;
             case R.id.btn_hell_channel:
                 intent = new Intent(this, HellChannel.class);

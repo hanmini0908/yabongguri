@@ -153,7 +153,7 @@ public class Ttsss extends Activity {
         mTv_ttsss.setText(strMap + " 2");
 
         String strMst1 = getString(R.string.mst_karina);  //카드패턴 0, 4
-        String strBoss = getString(R.string.mst_the7);
+        String strBoss = getString(R.string.mst_mistral);
         int nDrawableId = R.drawable.map_tan2_0;  //카드패턴 0, 4
 
         switch (mCardPatternIndex) {

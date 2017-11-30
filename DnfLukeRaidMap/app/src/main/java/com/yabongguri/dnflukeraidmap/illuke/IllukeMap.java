@@ -102,7 +102,7 @@ public class IllukeMap extends Activity {
         String strMst1 = getString(R.string.mst_metal);
         String strMst2 = getString(R.string.mst_beki);
         String strMst3 = getString(R.string.mst_karina);
-        String strMst4 = getString(R.string.mst_the7);
+        String strMst4 = getString(R.string.mst_mistral);
         String strBoss = getString(R.string.mst_losa);
         int nDrawableId = R.drawable.map_il_tan;
 
@@ -181,7 +181,7 @@ public class IllukeMap extends Activity {
     }
 
     private void luke() {
-        String strMap = getString(R.string.il_luke);
+        String strMap = getString(R.string.il_sm);
         mTv_il.setText(strMap);
 
         String strBoss = getString(R.string.mst_luke);

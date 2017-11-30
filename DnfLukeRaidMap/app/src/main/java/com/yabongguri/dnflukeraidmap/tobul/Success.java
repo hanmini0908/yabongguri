@@ -47,9 +47,9 @@ public class Success extends Activity {
         }
 
         if (mIsRaid)
-            mTvSuccess.setText("루크 레이드 저지/토벌\n성공을 축하드립니다!");
+            mTvSuccess.setText("루크 레이드 성공을\n축하드립니다!");
         else
-            mTvSuccess.setText("일반루크 성공을\n축하드립니다!");
+            mTvSuccess.setText("일반 루크 성공을\n축하드립니다!");
     }
 
     public void onClickGoHome(View v) {
