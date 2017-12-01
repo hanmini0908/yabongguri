@@ -31,14 +31,14 @@
             android:layout_marginTop="40dp">
 
             <Button
-                android:text="빛"
+                android:text="@string/tb_lu"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_lumen"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"/>
             <Button
-                android:text="어둠"
+                android:text="@string/tb_cal"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_caligo"

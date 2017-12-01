@@ -23,7 +23,6 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"/>
         </LinearLayout>
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -32,21 +31,21 @@
             android:layout_gravity="center"
             android:layout_weight="1">
             <Button
-                android:text="파파파탄"
+                android:text="@string/jj_pppt"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_pppt"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"/>
             <Button
-                android:text="탄탄소소소"
+                android:text="@string/jj_ttsss"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_ttsss"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"/>
             <Button
-                android:text="맵 선택하기"
+                android:text="@string/jj_others"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_others"

@@ -18,6 +18,6 @@ public class RuntimeConfig {
     public static int getCardPreference(Context context)
     {
         SharedPreferences oPreference = context.getSharedPreferences(PREFERENCE_FILE_NAME, Activity.MODE_PRIVATE);
-        return  oPreference.getInt(PREFERENCE_CARD, -1);
+        return  oPreference.getInt(PREFERENCE_CARD, 0);
     }
 }

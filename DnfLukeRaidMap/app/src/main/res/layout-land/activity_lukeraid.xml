@@ -17,13 +17,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="일반적으로\n물딜팟이 '빛',\n마딜팟이 '어둠'을 가게 됩니다."
+                android:text="레이드 가기 전에\n수리비 골드 보유 확인\n코인 갯수 확인\n무큐 갯수 확인하세요!"
                 android:textSize="15sp"
                 android:textAlignment="center"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"/>
         </LinearLayout>
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -32,17 +31,17 @@
             android:layout_gravity="center"
             android:layout_weight="1">
             <Button
-                android:text="@string/tb_lu"
+                android:text="@string/jj"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_lumen"
+                android:id="@+id/btn_jj"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"/>
             <Button
-                android:text="@string/tb_cal"
+                android:text="@string/tb"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_caligo"
+                android:id="@+id/btn_tb"
                 android:layout_gravity="center_horizontal"/>
         </LinearLayout>
     </LinearLayout>
