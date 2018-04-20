@@ -11,12 +11,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="140dp"
             android:layout_marginBottom="20dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="일반적으로\n물딜팟이 '빛',\n마딜팟이 '어둠'을 가게 됩니다."
+                android:text="물딜팟 - 빛\n마딜팟 - 어둠"
                 android:textSize="15sp"
                 android:textAlignment="center"
                 android:layout_alignParentLeft="true"

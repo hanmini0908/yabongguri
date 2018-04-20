@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.io.BufferedReader;
 import java.net.HttpURLConnection;
 
@@ -32,6 +35,12 @@ public class HellChannel extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hell_channel);
+
+        if (Define.IS_MAP_AD) {     //광고 없는 버전 만들기 위해서 추가해놓음
+            AdView adView = (AdView) findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            adView.loadAd(adRequest);
+        }
 
         mTextView = (TextView)findViewById(R.id.htmlText);
         mTvDot1 = (TextView)findViewById(R.id.tvDot1);

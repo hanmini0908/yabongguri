@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.content.Intent;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.yabongguri.dnflukeraidmap.Define;
 import com.yabongguri.dnflukeraidmap.R;
 import com.yabongguri.dnflukeraidmap.RuntimeConfig;
 import com.yabongguri.dnflukeraidmap.tobul.Tb;
@@ -34,6 +37,12 @@ public class Pppt extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jj_pppt);
+
+        if (Define.IS_MAP_AD) {     //광고 없는 버전 만들기 위해서 추가해놓음
+            AdView adView = (AdView) findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            adView.loadAd(adRequest);
+        }
 
         //Activity에 입력이 없어도 화면 꺼지지 않게 하기
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
