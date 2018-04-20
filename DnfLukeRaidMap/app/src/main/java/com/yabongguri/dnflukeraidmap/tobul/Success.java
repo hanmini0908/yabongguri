@@ -13,6 +13,7 @@ import com.google.android.gms.ads.AdView;
 import com.yabongguri.dnflukeraidmap.Define;
 import com.yabongguri.dnflukeraidmap.MainActivity;
 import com.yabongguri.dnflukeraidmap.R;
+import com.yabongguri.dnflukeraidmap.juji.Jj;
 
 /**
  * Created by BitnaKeum on 2017-11-19.
@@ -54,6 +55,10 @@ public class Success extends Activity {
 
     public void onClickGoHome(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void onClickGoJj(View v) {
+        Intent intent = new Intent(this, Jj.class);
         startActivity(intent);
     }
 }
