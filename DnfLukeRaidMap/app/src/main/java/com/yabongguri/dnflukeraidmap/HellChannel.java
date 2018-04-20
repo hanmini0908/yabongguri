@@ -116,7 +116,7 @@ public class HellChannel extends Activity {
 
     private String getHellChannel() {
         String title = "";
-        int channel = ((int)(Math.random() * 152)) + 1;
+        int channel = ((int)(Math.random() * 177)) + 1;
 
         if (channel >= 1 && channel <= 15) {
             title = "그란플로리스 " + Integer.toString(channel);
@@ -144,22 +144,22 @@ public class HellChannel extends Activity {
             title = "파워 스테이션 " + Integer.toString(channel - 85 + 20);
         } else if (channel >= 91 && channel <= 100) {
             title = "노블스카이 " + Integer.toString(channel - 90);
-        } else if (channel >= 101 && channel <= 105) {
+        } else if (channel >= 101 && channel <= 110) {
             title = "죽은자의 성 " + Integer.toString(channel - 100 + 10);
-        } else if (channel >= 106 && channel <= 120) {
-            title = "메트로센터 " + Integer.toString(channel - 105 + 29);
-        } else if (channel >= 121 && channel <= 125) {
-            title = "망자의협곡 " + Integer.toString(channel - 120 + 20);
-        } else if (channel >= 126 && channel <= 135) {
-            title = "이계던전 " + Integer.toString(channel - 125);
-        } else if (channel >= 136 && channel <= 140) {
-            title = "고대던전 " + Integer.toString(channel - 135 + 20);
-        } else if (channel >= 141 && channel <= 142) {
-            title = "거래 - 경매장 " + Integer.toString(channel - 140 + 60);
-        } else if (channel >= 143 && channel <= 147) {
-            title = "설산 " + Integer.toString(channel - 142 + 10);
+        } else if (channel >= 111 && channel <= 125) {
+            title = "메트로센터 " + Integer.toString(channel - 110 + 29);
+        } else if (channel >= 126 && channel <= 130) {
+            title = "망자의협곡 " + Integer.toString(channel - 125 + 20);
+        } else if (channel >= 131 && channel <= 145) {
+            title = "차원의 틈 " + Integer.toString(channel - 130);
         } else if (channel >= 148 && channel <= 152) {
-            title = "노스마이어 " + Integer.toString(channel - 147 + 15);
+            title = "설산 " + Integer.toString(channel - 147 + 10);
+        } else if (channel >= 146 && channel <= 147) {
+            title = "거래 - 경매장 " + Integer.toString(channel - 145 + 60);
+        } else if (channel >= 153 && channel <= 157) {
+            title = "노스마이어 " + Integer.toString(channel - 152 + 15);
+        } else if (channel >= 158 && channel <= 177) {
+            title = "마수 던전 " + Integer.toString(channel - 157 + 29);
         }
 
         return title;
