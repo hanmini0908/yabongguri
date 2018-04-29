@@ -24,6 +24,7 @@ public class Pppt extends Activity {
 
     private TextView mTv_pppt;
     private TextView mTv_named;
+    private TextView mTv_hard;
     private ImageView mIv_pppt;
     private Button mBtn_prev;
     private Button mBtn_next;
@@ -49,6 +50,7 @@ public class Pppt extends Activity {
 
         mTv_pppt = (TextView)findViewById(R.id.tv_pppt);
         mTv_named = (TextView)findViewById(R.id.tv_pppt_named);
+//        mTv_hard = (TextView)findViewById(R.id.tv_pppt_hard);
         mIv_pppt = (ImageView)findViewById(R.id.iv_pppt);
         mBtn_prev = (Button)findViewById(R.id.btn_pppt_prev);
         mBtn_next = (Button)findViewById(R.id.btn_pppt_next);
@@ -145,6 +147,9 @@ public class Pppt extends Activity {
         String strMap = getString(R.string.jj_p);
         mTv_pppt.setText(strMap + " 1");
 
+//        String strHard = getString(R.string.hard_p);
+//        mTv_hard.setText(strHard);
+
         String strMst1 = getString(R.string.mst_red);    //카드패턴 0, 2
         String strBoss = getString(R.string.mst_nerbe);  //카드패턴 0, 2
         int nDrawableId = R.drawable.map_pa1_0;    //카드패턴 0, 2
@@ -178,6 +183,9 @@ public class Pppt extends Activity {
         String strMap = getString(R.string.jj_p);
         mTv_pppt.setText(strMap + " 2");
 
+//        String strHard = getString(R.string.hard_p);
+//        mTv_hard.setText(strHard);
+
         String strMst1 = getString(R.string.mst_argos);  //카드패턴 0, 2
         String strBoss = getString(R.string.mst_mark);
         int nDrawableId = R.drawable.map_pa2_0;    //카드패턴 0, 2
@@ -208,6 +216,9 @@ public class Pppt extends Activity {
         String strMap = getString(R.string.jj_p);
         mTv_pppt.setText(strMap + " 3");
 
+//        String strHard = getString(R.string.hard_p);
+ //       mTv_hard.setText(strHard);
+
         String strBoss = getString(R.string.mst_bupon);
         int nDrawableId = R.drawable.map_pa3;
 
@@ -221,6 +232,9 @@ public class Pppt extends Activity {
 
         String strMap = getString(R.string.jj_t);
         mTv_pppt.setText(strMap + " 3");
+
+//        String strHard = getString(R.string.hard_t);
+//        mTv_hard.setText(strHard);
 
         String strMst1 = getString(R.string.mst_beki);  //카드패턴 0, 3
         String strBoss = getString(R.string.mst_losa);
