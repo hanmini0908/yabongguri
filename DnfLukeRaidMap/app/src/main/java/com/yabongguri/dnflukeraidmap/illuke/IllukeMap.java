@@ -99,7 +99,7 @@ public class IllukeMap extends Activity {
         }
         else if (mMapIndex == 5) {
             Intent intent = new Intent(this, Success.class);
-            intent.putExtra("isRaid", false);
+            intent.putExtra("nRaidType", 0);
             startActivity(intent);
         }
     }

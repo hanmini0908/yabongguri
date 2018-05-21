@@ -95,7 +95,7 @@ public class SingleRaidTue extends Activity {
         }
         else if (mMapIndex == 5) {
             Intent intent = new Intent(this, Success.class);
-            intent.putExtra("isRaid", true);
+            intent.putExtra("nRaidType", 2);
             startActivity(intent);
         }
     }

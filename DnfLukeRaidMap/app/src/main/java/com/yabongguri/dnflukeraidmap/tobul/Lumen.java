@@ -88,7 +88,7 @@ public class Lumen extends Activity {
         }
         else if (mMapIndex == 4) {
             Intent intent = new Intent(this, Success.class);
-            intent.putExtra("isRaid", true);
+            intent.putExtra("nRaidType", 1);
             startActivity(intent);
         }
     }
