@@ -52,7 +52,8 @@
                 android:text="도움이 되셨다면 상단 광고를 클릭해주세요.\n개발자에게 큰 힘이 됩니다."
                 android:textSize="15dp"
                 android:textAlignment="center"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:visibility="invisible"/>
         </LinearLayout>
     </FrameLayout>
     <LinearLayout
