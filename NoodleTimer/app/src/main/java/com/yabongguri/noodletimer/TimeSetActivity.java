@@ -12,7 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class TimeSetActivity extends AppCompatActivity {
     private TextView mTvMinute;
@@ -24,6 +25,12 @@ public class TimeSetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_set);
+
+        if (Define.IS_Time_AD) {
+            AdView adView = (AdView) findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            adView.loadAd(adRequest);
+        }
 
         mTvMinute = (TextView) findViewById(R.id.tv_minute);
         mTvSecond = (TextView) findViewById(R.id.tv_second);

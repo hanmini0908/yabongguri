@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class MainActivity extends AppCompatActivity {
     private ImageButton mIbLamyun;
     private ImageButton mIbKal;
@@ -32,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, getString(R.string.admob_app_id));
+
+        if (Define.IS_MAIN_AD) {
+            AdView adView = (AdView) findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            adView.loadAd(adRequest);
+        }
 
         mIbLamyun = (ImageButton)findViewById(R.id.ib_lamyun);
         mIbKal = (ImageButton)findViewById(R.id.ib_kal);
