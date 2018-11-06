@@ -39,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:textSize="20dp" />
             <TextView
                 android:id="@+id/tv_kal"
@@ -46,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:textSize="20dp" />
         </LinearLayout>
 
@@ -78,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:textSize="20dp" />
             <TextView
                 android:id="@+id/tv_woodong"
@@ -85,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:textSize="20dp" />
         </LinearLayout>
 
@@ -117,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:textSize="20dp" />
             <TextView
                 android:id="@+id/tv_somyun"
@@ -124,6 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:textSize="20dp" />
         </LinearLayout>
 
@@ -156,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:textSize="20dp" />
             <TextView
                 android:id="@+id/tv_mine"
@@ -163,6 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:textSize="20dp" />
         </LinearLayout>
 
