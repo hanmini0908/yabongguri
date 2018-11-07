@@ -75,7 +75,13 @@ public class MainActivity extends AppCompatActivity {
         getSettingValues();
     }
 
-    private void getSettingValues () {
+    @Override
+    protected void onResume() {
+        getSettingValues();
+        super.onResume();
+    }
+
+    private void getSettingValues() {
         mTvLamyun.setText(convertTimeValues(RuntimeConfig.getLamyunPreference(this)));
         mTvKal.setText(convertTimeValues(RuntimeConfig.getKalPreference(this)));
         mTvJjolmyun.setText(convertTimeValues(RuntimeConfig.getJjolmyunPreference(this)));
@@ -99,35 +105,35 @@ public class MainActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.ib_lamyun:
                         selectItem = RuntimeConfig.PREFERENCE_LAMYUN;
-                        RuntimeConfig.setLamyunPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_LAMYUN_DEFAULT);
+                        //RuntimeConfig.setLamyunPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_LAMYUN_DEFAULT);
                         break;
                     case R.id.ib_kal:
                         selectItem = RuntimeConfig.PREFERENCE_KAL;
-                        RuntimeConfig.setKalPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_KAL_DEFAULT);
+                        //RuntimeConfig.setKalPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_KAL_DEFAULT);
                         break;
                     case R.id.ib_jjolmyun:
                         selectItem = RuntimeConfig.PREFERENCE_JJOLMYUN;
-                        RuntimeConfig.setJjolmyunPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_JJOLMYUN_DEFAULT);
+                        //RuntimeConfig.setJjolmyunPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_JJOLMYUN_DEFAULT);
                         break;
                     case R.id.ib_woodong:
                         selectItem = RuntimeConfig.PREFERENCE_WOODONG;
-                        RuntimeConfig.setWoodongPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_WOODONG_DEFAULT);
+                        //RuntimeConfig.setWoodongPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_WOODONG_DEFAULT);
                         break;
                     case R.id.ib_pasta:
                         selectItem = RuntimeConfig.PREFERENCE_PASTA;
-                        RuntimeConfig.setPastaPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_PASTA_DEFAULT);
+                        //RuntimeConfig.setPastaPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_PASTA_DEFAULT);
                         break;
                     case R.id.ib_somyun:
                         selectItem = RuntimeConfig.PREFERENCE_SOMYUN;
-                        RuntimeConfig.setSomyunPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_SOMYUN_DEFAULT);
+                        //RuntimeConfig.setSomyunPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_SOMYUN_DEFAULT);
                         break;
                     case R.id.ib_dangmyun:
                         selectItem = RuntimeConfig.PREFERENCE_DANGMYUN;
-                        RuntimeConfig.setDangmyunPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_DANGMYUN_DEFAULT);
+                        //RuntimeConfig.setDangmyunPreference(getApplicationContext(), RuntimeConfig.PREFERENCE_DANGMYUN_DEFAULT);
                         break;
                     case R.id.ib_mine:
                         selectItem = RuntimeConfig.PREFERENCE_MINE;
-                        RuntimeConfig.setMinePreference(getApplicationContext(), RuntimeConfig.PREFERENCE_MINE_DEFAULT);
+                        //RuntimeConfig.setMinePreference(getApplicationContext(), RuntimeConfig.PREFERENCE_MINE_DEFAULT);
                         break;
                     default:
                         break;

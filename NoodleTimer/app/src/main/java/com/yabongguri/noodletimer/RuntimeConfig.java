@@ -3,11 +3,12 @@ package com.yabongguri.noodletimer;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 public class RuntimeConfig {
     private final static String PREFERENCE_FILE_NAME				= "noodle:preferences";
 
-    public final static String PREFERENCE_LAMYUN				    = "lanmyun";
+    public final static String PREFERENCE_LAMYUN				    = "lamyun";
     public final static String PREFERENCE_KAL  				        = "kal";
     public final static String PREFERENCE_JJOLMYUN				    = "jjolmyun";
     public final static String PREFERENCE_WOODONG				    = "woodong";
@@ -57,39 +58,66 @@ public class RuntimeConfig {
     }
 
     public static int getLamyunPreference(Context context) {
-        return getPreferenceValue(context, PREFERENCE_LAMYUN, PREFERENCE_LAMYUN_DEFAULT);
+        return getPreferenceValue(context, PREFERENCE_LAMYUN);
     }
 
     public static int getKalPreference(Context context) {
-        return getPreferenceValue(context, PREFERENCE_KAL, PREFERENCE_KAL_DEFAULT);
+        return getPreferenceValue(context, PREFERENCE_KAL);
     }
 
     public static int getJjolmyunPreference(Context context) {
-        return getPreferenceValue(context, PREFERENCE_JJOLMYUN, PREFERENCE_JJOLMYUN_DEFAULT);
+        return getPreferenceValue(context, PREFERENCE_JJOLMYUN);
     }
 
     public static int getWoodongPreference(Context context) {
-        return getPreferenceValue(context, PREFERENCE_WOODONG, PREFERENCE_WOODONG_DEFAULT);
+        return getPreferenceValue(context, PREFERENCE_WOODONG);
     }
 
     public static int getPastaPreference(Context context) {
-        return getPreferenceValue(context, PREFERENCE_PASTA, PREFERENCE_PASTA_DEFAULT);
+        return getPreferenceValue(context, PREFERENCE_PASTA);
     }
 
     public static int getSomyunPreference(Context context) {
-        return getPreferenceValue(context, PREFERENCE_SOMYUN, PREFERENCE_SOMYUN_DEFAULT);
+        return getPreferenceValue(context, PREFERENCE_SOMYUN);
     }
 
     public static int getDangmyunPreference(Context context) {
-        return getPreferenceValue(context, PREFERENCE_DANGMYUN, PREFERENCE_DANGMYUN_DEFAULT);
+        return getPreferenceValue(context, PREFERENCE_DANGMYUN);
     }
 
     public static int getMinePreference(Context context) {
-        return getPreferenceValue(context, PREFERENCE_MINE, PREFERENCE_MINE_DEFAULT);
+        return getPreferenceValue(context, PREFERENCE_MINE);
     }
 
-    public static int getPreferenceValue(Context context, String key, int nDefault) {
+    public static int getPreferenceValue(Context context, String key) {
         SharedPreferences oPreference = context.getSharedPreferences(PREFERENCE_FILE_NAME, Activity.MODE_PRIVATE);
+        int nDefault = 0;
+        switch (key) {
+            case PREFERENCE_LAMYUN:
+                nDefault = PREFERENCE_LAMYUN_DEFAULT;
+                break;
+            case PREFERENCE_KAL:
+                nDefault = PREFERENCE_KAL_DEFAULT;
+                break;
+            case PREFERENCE_JJOLMYUN:
+                nDefault = PREFERENCE_JJOLMYUN_DEFAULT;
+                break;
+            case PREFERENCE_WOODONG:
+                nDefault = PREFERENCE_WOODONG_DEFAULT;
+                break;
+            case PREFERENCE_PASTA:
+                nDefault = PREFERENCE_PASTA_DEFAULT;
+                break;
+            case PREFERENCE_SOMYUN:
+                nDefault = PREFERENCE_SOMYUN_DEFAULT;
+                break;
+            case PREFERENCE_DANGMYUN:
+                nDefault = PREFERENCE_DANGMYUN_DEFAULT;
+                break;
+            case PREFERENCE_MINE:
+                nDefault = PREFERENCE_MINE_DEFAULT;
+                break;
+        }
         return  oPreference.getInt(key, nDefault);
     }
 

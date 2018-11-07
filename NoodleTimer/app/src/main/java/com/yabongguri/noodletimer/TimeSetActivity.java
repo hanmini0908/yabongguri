@@ -52,7 +52,7 @@ public class TimeSetActivity extends AppCompatActivity {
 
         Intent intent = new Intent(getIntent());
         selectItem = intent.getStringExtra("select_item");
-        timeValue = RuntimeConfig.getPreferenceValue(getApplicationContext(), selectItem, 0);
+        timeValue = RuntimeConfig.getPreferenceValue(getApplicationContext(), selectItem);
         Log.e("hanmin", "first timeValue : " + String.valueOf(timeValue));
         setTimeValues(timeValue);
 
