@@ -3,4 +3,9 @@
 
     <string name="admob_app_id">ca-app-pub-1028137355062989~4755421552</string>
     <string name="banner_ad_unit_id">ca-app-pub-1028137355062989/9615908137</string>
+
+    <string name="start_button">시작</string>
+    <string name="stop_button">정지</string>
+    <string name="set_time">설정 시간 저장</string>
+    <string name="set_time_toast">현재 시간이 저장 되었습니다.</string>
 </resources>
