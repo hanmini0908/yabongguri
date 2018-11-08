@@ -6,6 +6,7 @@ package com.yabongguri.dnflukeraidmap;
 
 public class Define {
     public static final boolean IS_MAIN_AD = true;
+    public static final boolean IS_SELECT_AD = true;
     public static final boolean IS_MAP_AD = true;
     public static final boolean IS_SUCCESS_AD = true;
 }

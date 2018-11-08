@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
@@ -11,19 +11,19 @@
         android:layout_marginTop="10dp"
         android:gravity="top">
         <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
         </com.google.android.gms.ads.AdView>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="30dp">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -34,21 +34,15 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="수리비 골드 보유 확인\n코인 갯수 확인\n무큐 갯수 확인"
-                    android:textSize="18sp"
-                    android:textAlignment="center"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="요구 항마력 : 4624"
                     android:textColor="#FF0000"
                     android:textSize="18sp"
+                    android:layout_marginBottom="30dp"
                     android:textAlignment="center"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"/>
             </LinearLayout>
+
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -57,18 +51,20 @@
                 android:layout_gravity="center"
                 android:layout_weight="1">
                 <Button
-                    android:text="@string/jj"
+                    android:text="@string/single_1"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btn_jj"
+                    android:id="@+id/btn_tue"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="20dp"
+                    android:onClick="onClickTue"/>
                 <Button
-                    android:text="@string/tb"
+                    android:text="@string/single_2"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btn_tb"
-                    android:layout_gravity="center_horizontal"/>
+                    android:id="@+id/btn_sat"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="onClickSat"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
