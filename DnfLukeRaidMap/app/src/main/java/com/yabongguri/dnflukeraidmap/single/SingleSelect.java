@@ -32,12 +32,18 @@ public class SingleSelect extends Activity {
     }
 
     public void onClickTue(View v) {
-        mIntent = new Intent(this, SingleRaidTue.class);
+        if (!Define.IS_REFRESH_ACTIVITY)
+            mIntent = new Intent(this, SingleRaidFirst.class);
+        else
+            mIntent = new Intent(this, SingleRaidFirst0.class);
         startActivity(mIntent);
     }
 
     public void onClickSat(View v) {
-        mIntent = new Intent(this, SingleRaidSat.class);
+        if (!Define.IS_REFRESH_ACTIVITY)
+            mIntent = new Intent(this, SingleRaidSecond.class);
+        else
+            mIntent = new Intent(this, SingleRaidSecond0.class);
         startActivity(mIntent);
     }
 }

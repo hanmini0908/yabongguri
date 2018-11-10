@@ -68,35 +68,67 @@ public class Others extends Activity implements View.OnClickListener {
         finish();
         Intent intent = null;
 
-        if ((v.getId() == R.id.btn_others_pa1) ||
-                (v.getId() == R.id.btn_others_pa2) ||
-                (v.getId() == R.id.btn_others_pa3) ||
-                (v.getId() == R.id.btn_others_tan3))
-            intent = new Intent(this, Pppt.class);
-        else if ((v.getId() == R.id.btn_others_tan1) ||
-                (v.getId() == R.id.btn_others_tan2) ||
-                (v.getId() == R.id.btn_others_so1) ||
-                (v.getId() == R.id.btn_others_so2) ||
-                (v.getId() == R.id.btn_others_so3))
-            intent = new Intent(this, Ttsss.class);
-        else if (v.getId() == R.id.btn_others_tb)
-            intent = new Intent(this, Tb.class);
+        if (!Define.IS_REFRESH_ACTIVITY) {
+            if ((v.getId() == R.id.btn_others_pa1) ||
+                    (v.getId() == R.id.btn_others_pa2) ||
+                    (v.getId() == R.id.btn_others_pa3) ||
+                    (v.getId() == R.id.btn_others_tan3))
+                intent = new Intent(this, Pppt.class);
+            else if ((v.getId() == R.id.btn_others_tan1) ||
+                    (v.getId() == R.id.btn_others_tan2) ||
+                    (v.getId() == R.id.btn_others_so1) ||
+                    (v.getId() == R.id.btn_others_so2) ||
+                    (v.getId() == R.id.btn_others_so3))
+                intent = new Intent(this, Ttsss.class);
+            else if (v.getId() == R.id.btn_others_tb)
+                intent = new Intent(this, Tb.class);
 
-        if ((v.getId() == R.id.btn_others_pa1) || (v.getId() == R.id.btn_others_tan1))
-            intent.putExtra("mapIndex", 0);
-        else if ((v.getId() == R.id.btn_others_pa2) || (v.getId() == R.id.btn_others_tan2))
-            intent.putExtra("mapIndex", 1);
-        else if ((v.getId() == R.id.btn_others_pa3) || (v.getId() == R.id.btn_others_so1))
-            intent.putExtra("mapIndex", 2);
-        else if ((v.getId() == R.id.btn_others_tan3) || (v.getId() == R.id.btn_others_so2))
-            intent.putExtra("mapIndex", 3);
-        else if (v.getId() == R.id.btn_others_so3)
-            intent.putExtra("mapIndex", 4);
+            if ((v.getId() == R.id.btn_others_pa1) || (v.getId() == R.id.btn_others_tan1))
+                intent.putExtra("mapIndex", 0);
+            else if ((v.getId() == R.id.btn_others_pa2) || (v.getId() == R.id.btn_others_tan2))
+                intent.putExtra("mapIndex", 1);
+            else if ((v.getId() == R.id.btn_others_pa3) || (v.getId() == R.id.btn_others_so1))
+                intent.putExtra("mapIndex", 2);
+            else if ((v.getId() == R.id.btn_others_tan3) || (v.getId() == R.id.btn_others_so2))
+                intent.putExtra("mapIndex", 3);
+            else if (v.getId() == R.id.btn_others_so3)
+                intent.putExtra("mapIndex", 4);
 
-        if (v.getId() != R.id.btn_others_tb)
-            intent.putExtra("isOthers", true);
+            if (v.getId() != R.id.btn_others_tb)
+                intent.putExtra("isOthers", true);
 
-        if (intent != null)
-            startActivity(intent);
+            if (intent != null)
+                startActivity(intent);
+        }
+        else {
+            if (v.getId() == R.id.btn_others_pa1)
+                intent = new Intent(this, PpptPa1.class);
+            else if (v.getId() == R.id.btn_others_pa2)
+                intent = new Intent(this, PpptPa2.class);
+            else if (v.getId() == R.id.btn_others_pa3)
+                intent = new Intent(this, PpptPa3.class);
+            else if (v.getId() == R.id.btn_others_tan3)
+                intent = new Intent(this, PpptTan3.class);
+
+            else if (v.getId() == R.id.btn_others_tan1)
+                intent = new Intent(this, TtsssTan1.class);
+            else if (v.getId() == R.id.btn_others_tan2)
+                intent = new Intent(this, TtsssTan2.class);
+            else if (v.getId() == R.id.btn_others_so1)
+                intent = new Intent(this, TtsssSo1.class);
+            else if (v.getId() == R.id.btn_others_so2)
+                intent = new Intent(this, TtsssSo2.class);
+            else if (v.getId() == R.id.btn_others_so3)
+                intent = new Intent(this, TtsssSo3.class);
+
+            else if (v.getId() == R.id.btn_others_tb)
+                intent = new Intent(this, Tb.class);
+
+            if (v.getId() != R.id.btn_others_tb)
+                intent.putExtra("isOthers", true);
+
+            if (intent != null)
+                startActivity(intent);
+        }
     }
 }

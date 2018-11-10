@@ -24,7 +24,7 @@ public class Pppt extends Activity {
 
     private TextView mTv_pppt;
     private TextView mTv_named;
-    private TextView mTv_hard;
+//    private TextView mTv_hard;
     private ImageView mIv_pppt;
     private Button mBtn_prev;
     private Button mBtn_next;

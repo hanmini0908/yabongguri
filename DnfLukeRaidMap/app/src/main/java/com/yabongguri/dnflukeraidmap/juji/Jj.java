@@ -50,10 +50,16 @@ public class Jj extends Activity implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.btn_pppt:
-                intent = new Intent(this, Pppt.class);
+                if (Define.IS_REFRESH_ACTIVITY)
+                    intent = new Intent(this, PpptPa1.class);
+                else
+                    intent = new Intent(this, Pppt.class);
                 break;
             case R.id.btn_ttsss:
-                intent = new Intent(this, Ttsss.class);
+                if (Define.IS_REFRESH_ACTIVITY)
+                    intent = new Intent(this, TtsssTan1.class);
+                else
+                    intent = new Intent(this, Ttsss.class);
                 break;
             case R.id.btn_others:
                 intent = new Intent(this, Others.class);

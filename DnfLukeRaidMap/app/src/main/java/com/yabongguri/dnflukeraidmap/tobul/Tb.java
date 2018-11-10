@@ -46,10 +46,16 @@ public class Tb extends Activity implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.btn_lumen:
-                intent = new Intent(this, Lumen.class);
+                if (Define.IS_REFRESH_ACTIVITY)
+                    intent = new Intent(this, LumenMap1.class);
+                else
+                    intent = new Intent(this, Lumen.class);
                 break;
             case R.id.btn_caligo:
-                intent = new Intent(this, Caligo.class);
+                if (Define.IS_REFRESH_ACTIVITY)
+                    intent = new Intent(this, CaligoMap1.class);
+                else
+                    intent = new Intent(this, Caligo.class);
                 break;
         }
 

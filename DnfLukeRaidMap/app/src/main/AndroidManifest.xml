@@ -40,7 +40,43 @@
             android:label="@string/jj_pppt">
         </activity>
         <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.PpptPa1"
+            android:label="@string/jj_pppt">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.PpptPa2"
+            android:label="@string/jj_pppt">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.PpptPa3"
+            android:label="@string/jj_pppt">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.PpptTan3"
+            android:label="@string/jj_pppt">
+        </activity>
+        <activity
             android:name="com.yabongguri.dnflukeraidmap.juji.Ttsss"
+            android:label="@string/jj_ttsss">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.TtsssTan1"
+            android:label="@string/jj_ttsss">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.TtsssTan2"
+            android:label="@string/jj_ttsss">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.TtsssSo1"
+            android:label="@string/jj_ttsss">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.TtsssSo2"
+            android:label="@string/jj_ttsss">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.juji.TtsssSo3"
             android:label="@string/jj_ttsss">
         </activity>
         <activity
@@ -52,7 +88,47 @@
             android:label="@string/tb_lu">
         </activity>
         <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.LumenMap1"
+            android:label="@string/tb_lu">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.LumenMap2"
+            android:label="@string/tb_lu">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.LumenMap3"
+            android:label="@string/tb_lu">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.LumenMap4"
+            android:label="@string/tb_lu">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.LumenMap5"
+            android:label="@string/tb_lu">
+        </activity>
+        <activity
             android:name="com.yabongguri.dnflukeraidmap.tobul.Caligo"
+            android:label="@string/tb_cal">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.CaligoMap1"
+            android:label="@string/tb_cal">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.CaligoMap2"
+            android:label="@string/tb_cal">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.CaligoMap3"
+            android:label="@string/tb_cal">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.CaligoMap4"
+            android:label="@string/tb_cal">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.tobul.CaligoMap5"
             android:label="@string/tb_cal">
         </activity>
         <activity
@@ -66,9 +142,33 @@
         <activity
         android:name="com.yabongguri.dnflukeraidmap.illuke.IlMapSelect"
         android:label="@string/il_select">
-    </activity>
+        </activity>
         <activity
             android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap"
+            android:label="@string/il_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap1"
+            android:label="@string/il_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap2"
+            android:label="@string/il_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap3"
+            android:label="@string/il_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap4"
+            android:label="@string/il_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap5"
+            android:label="@string/il_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.illuke.IllukeMap6"
             android:label="@string/il_luke">
         </activity>
         <activity
@@ -76,11 +176,59 @@
             android:label="@string/single_select">
         </activity>
         <activity
-            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidTue"
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidFirst"
             android:label="@string/single_luke">
         </activity>
         <activity
-            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSat"
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSecond"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidFirst0"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSecond0"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidFirst1"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSecond1"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidFirst2"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSecond2"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidFirst3"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSecond3"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidFirst4"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSecond4"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidFirst5"
+            android:label="@string/single_luke">
+        </activity>
+        <activity
+            android:name="com.yabongguri.dnflukeraidmap.single.SingleRaidSecond5"
             android:label="@string/single_luke">
         </activity>
     </application>
