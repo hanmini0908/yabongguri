@@ -16,14 +16,24 @@ public class RuntimeConfig {
     public final static String PREFERENCE_SOMYUN				    = "somyun";
     public final static String PREFERENCE_DANGMYUN				    = "dangmyun";
     public final static String PREFERENCE_MINE		    		    = "mine";
-    public final static int PREFERENCE_LAMYUN_DEFAULT		        = 270;
-    public final static int PREFERENCE_KAL_DEFAULT  			    = 370;
-    public final static int PREFERENCE_JJOLMYUN_DEFAULT			= 400;
-    public final static int PREFERENCE_WOODONG_DEFAULT				= 350;
+
+    public final static int PREFERENCE_LAMYUN_DEFAULT		        = 240;
+    public final static int PREFERENCE_KAL_DEFAULT  			    = 330;
+    public final static int PREFERENCE_JJOLMYUN_DEFAULT			    = 180;
+    public final static int PREFERENCE_WOODONG_DEFAULT				= 120;
     public final static int PREFERENCE_PASTA_DEFAULT				= 480;
-    public final static int PREFERENCE_SOMYUN_DEFAULT				= 350;
-    public final static int PREFERENCE_DANGMYUN_DEFAULT			= 420;
-    public final static int PREFERENCE_MINE_DEFAULT		    	= 100;
+    public final static int PREFERENCE_SOMYUN_DEFAULT				= 210;
+    public final static int PREFERENCE_DANGMYUN_DEFAULT			    = 360;
+    public final static int PREFERENCE_MINE_DEFAULT		    	    = 180;
+
+    public final static String PREFERENCE_LAMYUN_SET_TIME		    = "lamyun_set_time";
+    public final static String PREFERENCE_KAL_SET_TIME		        = "kal_set_time";
+    public final static String PREFERENCE_JJOLMYUN_SET_TIME		    = "jjolmyun_set_time";
+    public final static String PREFERENCE_WOODONG_SET_TIME		    = "woodong_set_time";
+    public final static String PREFERENCE_PASTA_SET_TIME	        = "pasta_set_time";
+    public final static String PREFERENCE_SOMYUN_SET_TIME		    = "somyun_set_time";
+    public final static String PREFERENCE_DANGMYUN_SET_TIME		    = "dangmyun_set_time";
+    public final static String PREFERENCE_MINE_SET_TIME    		    = "mine_set_time";
 
     public static void setLamyunPreference(Context context, int value) {
         setPreferenceValue(context, PREFERENCE_LAMYUN, value);
@@ -121,9 +131,26 @@ public class RuntimeConfig {
         return  oPreference.getInt(key, nDefault);
     }
 
+    public static long getPreferenceLongValue(Context context, String key) {
+        SharedPreferences oPreference = context.getSharedPreferences(PREFERENCE_FILE_NAME, Activity.MODE_PRIVATE);
+        return  oPreference.getLong(key, 0);
+    }
+
     public static void setPreferenceValue(Context context, String key, int value) {
         SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCE_FILE_NAME, Activity.MODE_PRIVATE).edit();
         editor.putInt(key, value);
+        editor.commit();
+    }
+
+    public static void setPreferenceValue(Context context, String key, Long value) {
+        SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCE_FILE_NAME, Activity.MODE_PRIVATE).edit();
+        editor.putLong(key, value);
+        editor.commit();
+    }
+
+    public static void removePreferenceValue(Context context, String key) {
+        SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCE_FILE_NAME, Activity.MODE_PRIVATE).edit();
+        editor.remove(key);
         editor.commit();
     }
 }

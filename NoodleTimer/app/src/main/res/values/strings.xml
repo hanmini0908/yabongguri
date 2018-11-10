@@ -8,4 +8,19 @@
     <string name="stop_button">정지</string>
     <string name="set_time">설정 시간 저장</string>
     <string name="set_time_toast">현재 시간이 저장 되었습니다.</string>
+    <string name="lamyun">라면은 구공탄에 끓여야 제맛이죠.</string>
+    <string name="kal">칼칼한 칼국수 한그릇 생각나는 날이네요.</string>
+    <string name="jjolmyun">새콤 달콤 쫄면은 인천이 원조.</string>
+    <string name="woodong">국물이 끝내줘요.</string>
+    <string name="pasta">봉골레 하나! 예! 솊!</string>
+    <string name="somyun">밀가루는 사랑입니다.</string>
+    <string name="dangmyun">사리는 싫어! 잡채가 되고 싶어.</string>
+    <string name="mine">어떤 음식도 상관 없어요. 당신의 면이 되고 싶어요.</string>
+    <string name="finish">시간 완료!!</string>
+    <string name="appwidget_text">항목을 설정하세요.</string>
+    <string name="add_widget">Add widget</string>
+    <string name="exit_message">앱을 종료하시겠습니까?</string>
+    <string name="confirm">확인</string>
+    <string name="cancel">취소</string>
+    <string name="exit">종료</string>
 </resources>
